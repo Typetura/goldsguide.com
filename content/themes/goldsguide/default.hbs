@@ -11,7 +11,7 @@
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/style.css"}}" />
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
@@ -19,7 +19,6 @@
 
 </head>
 <body class="{{body_class}}">
-<div class="viewport">
 
     <header id="gh-head" class="gh-head {{#if @site.cover_image}}has-cover{{/if}}">
         <nav class="gh-head-inner inner gh-container">
@@ -76,9 +75,6 @@
         </div>
     </footer>
 
-</div>
-{{!-- /.viewport --}}
-
 
 {{!-- Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries --}}
 <script
@@ -89,10 +85,6 @@
 <script src="{{asset "built/goldsguide.js"}}"></script>
 <script>
 $(document).ready(function () {
-    // Mobile Menu Trigger
-    $('.gh-burger').click(function () {
-        $('body').toggleClass('gh-head-open');
-    });
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
 });

@@ -1,0 +1,44 @@
+html {
+  --primary: ;
+  --background: ;
+  --background-alt: ;
+  --text: ;
+  --text-overlay: ;
+  --max-width: 1200px;
+  --columns: 6;
+  --gutter: 1.5rem;
+}
+
+@media (min-width: 30em) {
+  html {
+    --columns: 12;
+  }
+}
+@media (min-width: 50em) {
+  html {
+    --columns: 24;
+  }
+}
+* {
+  --grid: minmax(var(--gutter), 1fr)
+    repeat(
+      var(--columns),
+      minmax(
+        0,
+        calc(
+          (var(--max-width) - (var(--gutter) * (var(--columns) - 1))) /
+            var(--columns)
+        )
+      )
+    )
+    minmax(var(--gutter), 1fr);
+  --subgrid: repeat(var(--columns), 1fr);
+}
+
+svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */
