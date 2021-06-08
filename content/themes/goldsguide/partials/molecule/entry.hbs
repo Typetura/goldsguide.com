@@ -1,0 +1,56 @@
+<article class="entry {{post_class}}">
+
+    {{#if feature_image}}
+    <a class="entry-image-link" href="{{url}}">
+        <img class="entry-image"
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1000w,
+                    {{img_url feature_image size="xl"}} 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="{{img_url feature_image size="m"}}"
+            alt="{{title}}"
+            loading="lazy"
+        />
+    </a>
+    {{/if}}
+
+    <div class="entry-content">
+
+        <a class="entry-link" href="{{url}}">
+            <header class="entry-header">
+                {{#if primary_tag}}
+                    {{#primary_tag}}
+                    <div class="entry-tag meta">{{name}}</div>
+                    {{/primary_tag}}
+                {{/if}}
+                <h1 class="entry-title primary-headline">{{title}}</h1>
+            </header>
+            <section class="entry-excerpt">
+                <p class="big">{{excerpt}}</p>
+            </section>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                {{#foreach authors}}
+                <li class="author-list-item">
+                    {{#if profile_image}}
+                    <a href="{{url}}" class="static-avatar">
+                        <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                    </a>
+                    {{else}}
+                    <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                    {{/if}}
+                </li>
+                {{/foreach}}
+            </ul>
+            <div class="post-card-byline-content">
+                <span>{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</span>
+                <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+            </div>
+        </footer>
+
+    </div>{{!--/.post-card-content--}}
+
+</article>
