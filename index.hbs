@@ -7,15 +7,12 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-  <div class="cover">
-    {{#foreach posts from="1" to="1"}}
-      {{> "molecule/entry"}}
-    {{/foreach}}
-    {{#foreach posts from="2" to="4"}}
-      {{> "molecule/entry"}}
-    {{/foreach}}
-  </div>
-    {{#foreach posts from="5" to="11"}}
-      {{> "molecule/entry"}}
-    {{/foreach}}
+
+	{{> "organism/home-cover"}}
+
+	{{> "organism/newsletter"}}
+	
+	{{> "organism/category"}}
 </main>
+
+{{> "organism/foot"}}
