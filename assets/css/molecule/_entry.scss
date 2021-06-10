@@ -14,6 +14,11 @@
   flex-direction: column;
 }
 
+.entry-tag,
+.entry-link {
+  display: block;
+}
+
 .entry-image-link {
   mix-blend-mode: normal;
   flex: 1;
