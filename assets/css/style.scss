@@ -1,2 +1,16 @@
 @import "vars";
 @import "base";
+
+hr {
+  border: 10px solid red !important;
+  opacity: 1 !important;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.entry {
+  width: 400px;
+}

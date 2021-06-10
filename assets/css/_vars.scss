@@ -1,15 +1,24 @@
 html {
   // COLOR
-  --primary: ;
-  --background: ;
-  --background-alt: ;
-  --text: ;
-  --text-overlay: ;
+  --primary: var(--accent_color);
+  --background: var(--accent_color);
+  --background-alt: #ffffff;
+  --text: #353d48;
+  --text-overlay: #353d48;
 
   // GRID
   --max-width: 1200px;
   --columns: 6;
   --gutter: 1.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    --primary: var(--accent_color);
+    --background: #353d48;
+    --background-alt: #000000;
+    --text: #ffffff;
+    --text-overlay: #f7e6c7;
+  }
 }
 @media (min-width: 30em) {
   html {
