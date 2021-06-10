@@ -4,6 +4,7 @@
   gap: var(--gutter);
   margin: var(--gutter) 0;
   position: relative;
+  color: var(--text-alt);
   .gold-bars {
     width: 60rem;
     height: auto;
@@ -14,6 +15,10 @@
     margin-right: -60rem;
     top: -5rem;
     z-index: -2;
+    @media (prefers-color-scheme: dark) {
+      mix-blend-mode: normal;
+      opacity: 50%;
+    }
   }
   &::before {
     content: "";
@@ -25,17 +30,6 @@
     margin: -1px calc(var(--gutter) * -1) calc(var(--gutter) * -1);
     box-shadow: var(--shadow);
   }
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 1px;
-    background: var(--text);
-    top: 0;
-    bottom: var(--gutter);
-    grid-column-start: 14;
-    margin-left: calc(var(--gutter) * -1);
-  }
   .entry {
     grid-column-start: 14;
     grid-column-end: span 12;
@@ -45,6 +39,7 @@
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: span 3;
+    border-right: 1px solid var(--text);
     --tt-scale: 1;
     .entry-image-link {
       margin-left: calc(var(--gutter) * -3);

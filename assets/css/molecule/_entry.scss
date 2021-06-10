@@ -2,6 +2,12 @@
   display: flex;
   justify-content: flex-start;
   gap: var(--gutter);
+  a {
+    text-decoration-color: transparent;
+  }
+  a:hover {
+    text-decoration-color: var(--primary);
+  }
 }
 
 .entry.is-vertical {
@@ -11,6 +17,10 @@
 .entry-image-link {
   mix-blend-mode: normal;
   flex: 1;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .entry.is-vertical > .entry-image-link {

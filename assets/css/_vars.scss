@@ -8,7 +8,7 @@ html {
   --background: var(--accent_color);
   --background-alt: #ffffff;
   --text: #353d48;
-  --text-overlay: #353d48;
+  --text-alt: #353d48;
 
   --shadow: 0 0.5rem 1.7rem rgba(206, 108, 19, 0.3);
 
@@ -34,8 +34,8 @@ html {
     --primary: var(--accent_color);
     --background: #353d48;
     --background-alt: #000000;
-    --text: #ffffff;
-    --text-overlay: #f7e6c7;
+    --text: #f7e6c7;
+    --text-alt: #ffffff;
 
     --shadow: 0 0.5rem 1.7rem rgba(0, 0, 0, 0.3);
   }

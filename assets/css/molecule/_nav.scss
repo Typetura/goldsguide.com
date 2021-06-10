@@ -5,6 +5,12 @@
   display: flex;
   align-content: baseline;
   justify-content: space-between;
+  a {
+    text-decoration-color: transparent;
+  }
+  a:hover {
+    text-decoration-color: var(--primary);
+  }
   .nav {
     font-size: 1em;
     display: flex;
