@@ -1,0 +1,17 @@
+.main-nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem var(--gutter);
+  display: flex;
+  align-content: baseline;
+  justify-content: space-between;
+  .nav {
+    font-size: 1em;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-content: baseline;
+    gap: 1rem;
+  }
+}

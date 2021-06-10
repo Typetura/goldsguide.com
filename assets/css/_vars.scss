@@ -1,4 +1,8 @@
 html {
+  // Typography
+  --tt-base: 18;
+  --tt-scale: 1.2;
+
   // COLOR
   --primary: var(--accent_color);
   --background: var(--accent_color);
@@ -6,10 +10,24 @@ html {
   --text: #353d48;
   --text-overlay: #353d48;
 
+  --shadow: 0 0.5rem 1.7rem rgba(206, 108, 19, 0.3);
+
   // GRID
   --max-width: 1200px;
   --columns: 6;
   --gutter: 1.5rem;
+  --grid: minmax(var(--gutter), 1fr)
+    repeat(
+      var(--columns),
+      minmax(
+        0,
+        calc(
+          (var(--max-width) - (var(--gutter) * (var(--columns) - 1))) /
+            var(--columns)
+        )
+      )
+    )
+    minmax(var(--gutter), 1fr);
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -18,6 +36,8 @@ html {
     --background-alt: #000000;
     --text: #ffffff;
     --text-overlay: #f7e6c7;
+
+    --shadow: 0 0.5rem 1.7rem rgba(0, 0, 0, 0.3);
   }
 }
 @media (min-width: 30em) {
@@ -32,17 +52,5 @@ html {
 }
 
 * {
-  --grid: minmax(var(--gutter), 1fr)
-    repeat(
-      var(--columns),
-      minmax(
-        0,
-        calc(
-          (var(--max-width) - (var(--gutter) * (var(--columns) - 1))) /
-            var(--columns)
-        )
-      )
-    )
-    minmax(var(--gutter), 1fr);
   --subgrid: repeat(var(--columns), 1fr);
 }

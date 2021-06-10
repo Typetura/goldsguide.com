@@ -1,0 +1,22 @@
+.entry {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--gutter);
+}
+
+.entry.is-vertical {
+  flex-direction: column;
+}
+
+.entry-image-link {
+  mix-blend-mode: normal;
+  flex: 1;
+}
+
+.entry.is-vertical > .entry-image-link {
+  flex: 0;
+}
+
+.entry-content {
+  flex: 2;
+}

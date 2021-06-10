@@ -1,7 +1,9 @@
-{{navigation}}
+<nav class="main-nav small">
+  {{navigation}}
 
-{{#unless @member}}
-  <a class="gh-head-button" href="#/portal/signup">Subscribe</a>
-{{else}}
-  <a class="gh-head-button" href="#/portal/account">Account</a>
-{{/unless}}
+  {{#unless @member}}
+    <a class="gh-head-button" href="#/portal/signup">Subscribe</a>
+  {{else}}
+    <a class="gh-head-button" href="#/portal/account">Account</a>
+  {{/unless}}
+</nav>

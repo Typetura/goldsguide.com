@@ -1,9 +1,31 @@
 html {
   background: var(--accent_color);
+  color: var(--text);
+}
+
+a {
+  mix-blend-mode: multiply;
+  color: inherit;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  transition: text-decoration-color 0.2s ease;
+}
+a:hover {
+  text-decoration-color: var(--primary);
+}
+
+body {
+  margin: 0;
 }
 
 svg {
   display: block;
   width: 1em;
   height: 1em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  background: var(--primary);
 }

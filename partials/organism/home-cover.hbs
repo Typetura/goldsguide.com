@@ -1,6 +1,7 @@
-<div class="cover">
+<div class="home-cover">
+  {{> "icons/gold-bars"}}
   {{#foreach posts from="1" to="1"}}
-    {{> "molecule/entry"}}
+    {{> "molecule/entry" class="is-vertical" }}
   {{/foreach}}
   {{#foreach posts from="2" to="4"}}
     {{> "molecule/entry"}}

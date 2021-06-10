@@ -1,12 +1,27 @@
 html {
+  --tt-base: 18;
+  --tt-scale: 1.2;
   --primary: var(--accent_color);
   --background: var(--accent_color);
   --background-alt: #ffffff;
   --text: #353d48;
   --text-overlay: #353d48;
+  --shadow: 0 0.5rem 1.7rem rgba(206, 108, 19, 0.3);
   --max-width: 1200px;
   --columns: 6;
   --gutter: 1.5rem;
+  --grid: minmax(var(--gutter), 1fr)
+    repeat(
+      var(--columns),
+      minmax(
+        0,
+        calc(
+          (var(--max-width) - (var(--gutter) * (var(--columns) - 1))) /
+            var(--columns)
+        )
+      )
+    )
+    minmax(var(--gutter), 1fr);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +31,7 @@ html {
     --background-alt: #000000;
     --text: #ffffff;
     --text-overlay: #f7e6c7;
+    --shadow: 0 0.5rem 1.7rem rgba(0, 0, 0, 0.3);
   }
 }
 @media (min-width: 30em) {
@@ -29,23 +45,28 @@ html {
   }
 }
 * {
-  --grid: minmax(var(--gutter), 1fr)
-    repeat(
-      var(--columns),
-      minmax(
-        0,
-        calc(
-          (var(--max-width) - (var(--gutter) * (var(--columns) - 1))) /
-            var(--columns)
-        )
-      )
-    )
-    minmax(var(--gutter), 1fr);
   --subgrid: repeat(var(--columns), 1fr);
 }
 
 html {
   background: var(--accent_color);
+  color: var(--text);
+}
+
+a {
+  mix-blend-mode: multiply;
+  color: inherit;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  text-decoration-color: var(--primary);
+}
+
+body {
+  margin: 0;
 }
 
 svg {
@@ -54,14 +75,133 @@ svg {
   height: 1em;
 }
 
-hr {
-  border: 10px solid red !important;
-  opacity: 1 !important;
-}
-
 img {
   display: block;
   width: 100%;
+  background: var(--primary);
+}
+
+.entry {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--gutter);
+}
+
+.entry.is-vertical {
+  flex-direction: column;
+}
+
+.entry-image-link {
+  mix-blend-mode: normal;
+  flex: 1;
+}
+
+.entry.is-vertical > .entry-image-link {
+  flex: 0;
+}
+
+.entry-content {
+  flex: 2;
+}
+
+.home-masthead {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem var(--gutter);
+}
+
+.home-masthead-logo svg {
+  width: 50vw;
+  max-width: calc(var(--max-width) * 0.33);
+  min-width: 11rem;
+  height: auto;
+  margin-bottom: 1.4rem;
+}
+
+.home-masthead-description {
+  max-width: calc(var(--max-width) * 0.5);
+}
+
+.main-nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem var(--gutter);
+  display: flex;
+  align-content: baseline;
+  justify-content: space-between;
+}
+.main-nav .nav {
+  font-size: 1em;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-content: baseline;
+  gap: 1rem;
+}
+
+.home-cover {
+  display: grid;
+  grid-template-columns: var(--grid);
+  gap: var(--gutter);
+  margin: var(--gutter) 0;
+  position: relative;
+}
+.home-cover .gold-bars {
+  width: 60rem;
+  height: auto;
+  color: var(--primary);
+  mix-blend-mode: multiply;
+  position: absolute;
+  right: 50%;
+  margin-right: -60rem;
+  top: -5rem;
+  z-index: -2;
+}
+.home-cover::before {
+  content: "";
+  z-index: -1;
+  background: var(--background-alt);
+  border: 1px solid var(--text);
+  grid-column: 2/26;
+  grid-row: 1/4;
+  margin: -1px calc(var(--gutter) * -1) calc(var(--gutter) * -1);
+  box-shadow: var(--shadow);
+}
+.home-cover::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 1px;
+  background: var(--text);
+  top: 0;
+  bottom: var(--gutter);
+  grid-column-start: 14;
+  margin-left: calc(var(--gutter) * -1);
+}
+.home-cover .entry {
+  grid-column-start: 14;
+  grid-column-end: span 12;
+  --tt-scale: 0.6;
+}
+.home-cover .entry:first-of-type {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: span 3;
+  --tt-scale: 1;
+}
+.home-cover .entry:first-of-type .entry-image-link {
+  margin-left: calc(var(--gutter) * -3);
+}
+.home-cover .entry:nth-of-type(2) {
+  grid-row-start: 1;
+  margin-top: var(--gutter);
+}
+.home-cover .entry:nth-of-type(3) {
+  grid-row-start: 2;
+}
+.home-cover .entry:nth-of-type(4) {
+  grid-row-start: 3;
 }
 
 /*# sourceMappingURL=style.css.map */
