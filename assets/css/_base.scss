@@ -5,7 +5,7 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 :focus {
@@ -45,4 +45,8 @@ svg {
 img {
   display: block;
   width: 100%;
+}
+
+.flex-spacer {
+  flex: 1;
 }

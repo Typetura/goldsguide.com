@@ -1,8 +1,16 @@
 <section class="category">
-	<h1 class="category-name">Category</h1>
+{{#get "tags" limit="all" include="count.posts" order="count.posts desc" as |alltags|}}
+{{#foreach alltags}}
+<div class="category-break">
+	<h1 class="category-name primary-headline"><a href="{{url}}">{{name}}</a></h1>
 	<div class="category-entries">
-		{{#foreach posts from="5" to="14"}}
-	  {{> "molecule/entry"}}
-		{{/foreach}}
+    {{#get "posts" limit="all" filter="tag:{{slug}}" include="tags,authors"}}
+		  {{#foreach posts}}
+				{{> molecule/entry class="is-vertical"}}
+		  {{/foreach}}
+    {{/get}}
 	</div>
+</div>
+{{/foreach}}
+{{/get}}
 </section>

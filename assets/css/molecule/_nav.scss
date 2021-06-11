@@ -4,8 +4,8 @@
   padding: 1rem var(--gutter);
   display: flex;
   align-content: baseline;
-  justify-content: space-between;
-  opacity: 0.67;
+  justify-content: flex-start;
+  opacity: 0.85;
   transition: opacity var(--transition);
   &:hover {
     opacity: 1;
@@ -24,5 +24,15 @@
     padding: 0;
     align-content: baseline;
     gap: 1rem;
+    position: relative;
+    overflow: auto;
+    width: calc(100% - 5rem);
+  }
+  .main-nav-overflow {
+    position: relative;
+    width: 1rem;
+    transform: translatex(-1rem);
+    background: linear-gradient(90deg, transparent, var(--background));
+    align-self: stretch;
   }
 }

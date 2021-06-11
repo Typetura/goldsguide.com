@@ -2,11 +2,13 @@
   max-width: 50rem;
   margin: 6rem auto 0;
   text-align: center;
+  padding: 0 var(--gutter);
 }
 
 .newsletter-form {
   position: sticky;
   bottom: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
   top: 1rem;
   display: flex;
   background: var(--text);
@@ -45,4 +47,5 @@
   max-width: 50rem;
   margin: 1rem auto 6rem;
   text-align: center;
+  padding: 0 var(--gutter);
 }

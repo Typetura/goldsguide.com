@@ -29,20 +29,19 @@ a.entry-link {
   z-index: 2;
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
 }
 
 .entry-image {
   flex: 1;
+  width: 0;
   object-fit: contain;
   object-position: top;
 }
 
-.entry.is-vertical > .entry-image-link {
+.entry.is-vertical > .entry-image {
   flex: 0;
+  width: 100%;
 }
 
 .entry-content {

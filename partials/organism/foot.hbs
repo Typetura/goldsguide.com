@@ -1,8 +1,9 @@
-{{navigation}}
-{{navigation type="secondary"}}
-
-{{#unless @member}}
-  <a class="gh-head-button" href="#/portal/signup">Subscribe</a>
-{{else}}
-  <a class="gh-head-button" href="#/portal/account">Account</a>
-{{/unless}}
+<footer class="foot">
+  {{> molecule/nav}}
+  {{navigation type="secondary"}}
+  
+  <a href="/">
+    {{> icons/logo}}
+  </a>
+  <div class="copyright small"><em>Copyright © Tyler Gold {{date format="YYYY"}}</em></div>
+</footer>
