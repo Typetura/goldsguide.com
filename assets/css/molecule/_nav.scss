@@ -5,6 +5,11 @@
   display: flex;
   align-content: baseline;
   justify-content: space-between;
+  opacity: 0.67;
+  transition: opacity var(--transition);
+  &:hover {
+    opacity: 1;
+  }
   a {
     text-decoration-color: transparent;
   }

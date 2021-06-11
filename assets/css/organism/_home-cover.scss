@@ -41,8 +41,9 @@
     grid-row-end: span 3;
     border-right: 1px solid var(--text);
     --tt-scale: 1;
-    .entry-image-link {
-      margin-left: calc(var(--gutter) * -3);
+    .entry-image {
+      width: calc(100% + var(--gutter) - 1px);
+      margin-left: calc(var(--gutter) * -1 + 1px);
     }
   }
   .entry:nth-of-type(2) {

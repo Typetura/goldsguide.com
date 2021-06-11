@@ -1,9 +1,7 @@
 <article class="entry {{post_class}} {{class}}" {{#if primary_tag}}{{#primary_tag}}{{#if accent_color}}style="--tag_color:{{accent_color}}"{{/if}}{{/primary_tag}}{{/if}}>
 
   {{#if feature_image}}
-    <a class="entry-image-link" href="{{url}}">
-			{{> "atom/image"}}
-    </a>
+		{{> "atom/image"}}
   {{/if}}
 
   <div class="entry-content">

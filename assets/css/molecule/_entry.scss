@@ -2,8 +2,12 @@
   display: flex;
   justify-content: flex-start;
   gap: var(--gutter);
+  position: relative;
+  z-index: 1;
   a {
+    position: relative;
     text-decoration-color: transparent;
+    z-index: 3;
   }
   a:hover {
     text-decoration-color: var(--primary);
@@ -16,16 +20,25 @@
 
 .entry-tag,
 .entry-link {
-  display: block;
+  display: table;
+}
+a.entry-link {
+  position: static;
+}
+.entry-link::before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.entry-image-link {
-  mix-blend-mode: normal;
+.entry-image {
   flex: 1;
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
+  object-fit: contain;
+  object-position: top;
 }
 
 .entry.is-vertical > .entry-image-link {

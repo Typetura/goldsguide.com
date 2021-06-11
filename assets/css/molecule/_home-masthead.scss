@@ -1,12 +1,12 @@
 .home-masthead {
   max-width: var(--max-width);
-  margin: auto;
+  margin: 4rem auto 2rem;
   padding: 1rem var(--gutter);
 }
 
 .home-masthead-logo svg {
-  width: 50vw;
-  max-width: calc(var(--max-width) * 0.33);
+  width: 60vw;
+  max-width: calc(var(--max-width) * 0.4);
   min-width: 11rem;
   height: auto;
   margin-bottom: 1.4rem;
@@ -14,4 +14,5 @@
 
 .home-masthead-description {
   max-width: calc(var(--max-width) * 0.5);
+  --tt-scale: 1.8;
 }
