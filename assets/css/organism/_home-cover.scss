@@ -30,6 +30,12 @@
     .entry-image {
       flex: 0;
     }
+    &.is-feature {
+      margin-bottom: calc(var(--gutter) * -1 + 1px);
+      .entry-content {
+        margin: 0 0 0 calc(var(--gutter) * -1);
+      }
+    }
   }
   @media (max-width: 30em) {
     .entry:not(:first-of-type) .entry-image {
