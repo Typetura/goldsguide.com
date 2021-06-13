@@ -27,12 +27,16 @@
     position: relative;
     overflow: auto;
     width: calc(100% - 5rem);
+    scrollbar-width: none;
+		&::-webkit-scrollbar {
+		  display: none;
+		}
   }
   .main-nav-overflow {
     position: relative;
     width: 1rem;
     transform: translatex(-1rem);
-    background: linear-gradient(90deg, transparent, var(--background));
+    background: linear-gradient(90deg, hsla(39, 94%, 64%, 0), var(--background));
     align-self: stretch;
   }
 }

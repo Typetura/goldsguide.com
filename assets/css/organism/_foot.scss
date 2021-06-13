@@ -1,7 +1,7 @@
 .foot {
   max-width: var(--max-width);
   margin: auto;
-  padding: 2rem var(--gutter) 4rem;
+  padding: 2rem 0 4rem;
   a {
     text-decoration-color: transparent;
   }
@@ -9,11 +9,9 @@
     text-decoration-color: var(--primary);
   }
   .main-nav,
-  .nav {
+  > .nav {
     opacity: 1;
     list-style: none;
-    display: flex;
-    gap: 1rem;
     margin: 0;
     padding: 0;
   }

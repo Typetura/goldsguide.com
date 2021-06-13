@@ -42,12 +42,12 @@
     overflow: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
     scroll-snap-align: start;
     display: flex;
-		&::-webkit-scrollbar {
-		  display: none;
-		}
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .entry {
     position: relative;
@@ -66,9 +66,9 @@
   .entry-image {
     display: none;
   }
-	.entry.is-feature .entry-content {
-		margin: calc(var(--gutter) * -1);
-	}
+  .entry.is-feature .entry-content {
+    margin: calc(var(--gutter) * -1);
+  }
   @media (min-width: 50em) {
     .category-entries {
       scroll-snap-align: none;
@@ -86,8 +86,8 @@
     .entry:last-child {
       margin-right: max(var(--gutter), calc(50vw - (var(--max-width) / 2)));
     }
-	.entry.is-feature .entry-content {
-		margin: 0;
-	}
+    .entry.is-feature .entry-content {
+      margin: 0;
+    }
   }
 }

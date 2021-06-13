@@ -234,12 +234,16 @@ a.entry-link {
   position: relative;
   overflow: auto;
   width: calc(100% - 5rem);
+  scrollbar-width: none;
+}
+.main-nav .nav::-webkit-scrollbar {
+  display: none;
 }
 .main-nav .main-nav-overflow {
   position: relative;
   width: 1rem;
   transform: translatex(-1rem);
-  background: linear-gradient(90deg, transparent, var(--background));
+  background: linear-gradient(90deg, rgba(249, 189, 77, 0), var(--background));
   align-self: stretch;
 }
 
@@ -286,9 +290,9 @@ a.entry-link {
   overflow: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
   scroll-snap-align: start;
   display: flex;
+  scrollbar-width: none;
 }
 .category .category-entries::-webkit-scrollbar {
   display: none;
@@ -338,7 +342,7 @@ a.entry-link {
 .foot {
   max-width: var(--max-width);
   margin: auto;
-  padding: 2rem var(--gutter) 4rem;
+  padding: 2rem 0 4rem;
 }
 .foot a {
   text-decoration-color: transparent;
@@ -347,11 +351,9 @@ a.entry-link {
   text-decoration-color: var(--primary);
 }
 .foot .main-nav,
-.foot .nav {
+.foot > .nav {
   opacity: 1;
   list-style: none;
-  display: flex;
-  gap: 1rem;
   margin: 0;
   padding: 0;
 }
