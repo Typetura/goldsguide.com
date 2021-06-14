@@ -1,7 +1,7 @@
 .foot {
   max-width: var(--max-width);
   margin: auto;
-  padding: 2rem 0 4rem;
+  padding: 2rem var(--gutter) 4rem;
   a {
     text-decoration-color: transparent;
   }

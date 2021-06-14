@@ -239,10 +239,13 @@ a.entry-link {
 .main-nav .nav::-webkit-scrollbar {
   display: none;
 }
+.main-nav .nav > :last-child {
+  padding-right: 3rem;
+}
 .main-nav .main-nav-overflow {
   position: relative;
   width: 1rem;
-  transform: translatex(-1rem);
+  transform: translatex(calc(-1rem + 1px));
   background: linear-gradient(90deg, rgba(249, 189, 77, 0), var(--background));
   align-self: stretch;
 }
@@ -301,12 +304,19 @@ a.entry-link {
   position: relative;
   display: flex;
   overflow: hidden;
-  width: calc(100% - (var(--gutter) * 2));
-  min-width: calc(100% - (var(--gutter) * 2));
+  width: calc(100% - (var(--gutter) * 4));
+  min-width: calc(100% - (var(--gutter) * 4));
   padding: var(--gutter);
   scroll-snap-align: start;
   --tt-scale: 0.7;
   margin-bottom: 2rem;
+}
+.category .entry:last-child:not(.is-feature) {
+  padding-right: calc(var(--gutter) * 3);
+}
+.category .entry:only-child {
+  width: calc(100% - (var(--gutter) * 2));
+  min-width: calc(100% - (var(--gutter) * 2));
 }
 .category .entry-tag {
   display: none;
@@ -321,7 +331,8 @@ a.entry-link {
   .category .category-entries {
     scroll-snap-align: none;
   }
-  .category .entry {
+  .category .entry,
+.category .entry:only-child {
     width: 20rem;
     min-width: 20rem;
     margin: var(--gutter);
@@ -342,7 +353,7 @@ a.entry-link {
 .foot {
   max-width: var(--max-width);
   margin: auto;
-  padding: 2rem 0 4rem;
+  padding: 2rem var(--gutter) 4rem;
 }
 .foot a {
   text-decoration-color: transparent;
@@ -498,6 +509,7 @@ a.entry-link {
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
   font-family: inherit;
+  width: 0;
 }
 .newsletter-input:focus {
   box-shadow: inset 0 0 0 3px var(--primary);
