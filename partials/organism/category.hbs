@@ -1,6 +1,3 @@
-<section class="category">
-{{#get "tags" limit="all" include="count.posts" order="count.posts desc" as |alltags|}}
-{{#foreach alltags}}
 <div class="category-break">
 	<h1 class="category-name primary-headline"><a href="{{url}}">{{name}}</a></h1>
 	<div class="category-entries">
@@ -11,6 +8,3 @@
     {{/get}}
 	</div>
 </div>
-{{/foreach}}
-{{/get}}
-</section>

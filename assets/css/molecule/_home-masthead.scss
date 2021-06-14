@@ -4,6 +4,10 @@
   padding: 1rem var(--gutter);
 }
 
+.home-masthead-logo a {
+  display: table;
+}
+
 .home-masthead-logo svg {
   width: 60vw;
   max-width: calc(var(--max-width) * 0.4);

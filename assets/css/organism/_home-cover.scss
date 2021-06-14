@@ -30,7 +30,7 @@
     .entry-image {
       flex: 0;
     }
-    &.is-feature {
+    &.tag-feature {
       margin-bottom: calc(var(--gutter) * -1 + 1px);
       .entry-content {
         margin: 0 0 0 calc(var(--gutter) * -1);
