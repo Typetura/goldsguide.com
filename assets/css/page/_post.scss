@@ -5,12 +5,12 @@
   display: grid;
   grid-template-columns: var(--grid);
   column-gap: var(--gutter);
-  padding: 3rem 0 50vh;
-	
-	img {
-	  outline: 1px solid var(--background);
-	}
+  padding: 5rem 0 50vh;
+	box-shadow: var(--shadow);
 
+  img {
+    outline: 1px solid var(--background);
+  }
 
   ul,
   ol {

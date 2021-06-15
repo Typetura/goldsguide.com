@@ -1,0 +1,49 @@
+<header class="post-lede">
+
+  <a href="/" class="post-lede-logo">
+    {{> icons/logo}}
+  </a>
+
+
+  <div class="post-lede-content">
+    {{#if primary_tag}}
+      <a
+        class="meta post-lede-tag"
+        href="{{primary_tag.url}}"
+      >{{primary_tag.name}}</a>
+    {{/if}}
+
+    <h1 class="primary-headline post-title">{{title}}</h1>
+
+    {{#if custom_excerpt}}
+      <p class="primary-subheadline post-excerpt">{{custom_excerpt}}</p>
+    {{/if}}
+
+    <div class="flex-spacer"></div>
+
+    <div class="meta post-byline">
+      <span class="author-name">{{authors}}</span>
+      —
+      <time
+        class="byline-meta-date"
+        datetime="{{date format="YYYY-MM-DD"}}"
+      >{{date}}</time>
+    </div>
+  </div>
+
+  {{#if feature_image}}
+    <figure class="post-image">
+      {{! This is a responsive image, it loads different sizes depending on device
+          https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 }}
+      <img
+        srcset="{{img_url feature_image size="s"}} 300w,
+                      {{img_url feature_image size="m"}} 600w,
+                      {{img_url feature_image size="l"}} 1000w,
+                      {{img_url feature_image size="xl"}} 2000w"
+        sizes="(min-width: 1400px) 1400px, 92vw"
+        src="{{img_url feature_image size="xl"}}"
+        alt="{{title}}"
+      />
+    </figure>
+  {{/if}}
+</header>

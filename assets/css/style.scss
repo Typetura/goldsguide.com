@@ -6,10 +6,8 @@
 @import "atom/image";
 
 // Molecules
-@import "molecule/entry-lede";
 @import "molecule/entry-sidebar";
 @import "molecule/entry";
-@import "molecule/feature-lede";
 @import "molecule/home-masthead";
 @import "molecule/nav";
 @import "molecule/page-lede";
@@ -20,6 +18,7 @@
 @import "organism/home-cover";
 @import "organism/newsletter";
 @import "organism/next-clicks";
+@import "organism/post-lede";
 @import "organism/search";
 
 // Pages
