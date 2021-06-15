@@ -1,0 +1,14 @@
+.read-more {
+  display: flex;
+  max-width: var(--max-width);
+  padding: var(--gutter);
+  margin: auto;
+  gap: var(--gutter);
+  outline: 1px solid var(--text);
+  box-shadow: var(--shadow);
+  background: var(--background-alt);
+  color: var(--text-alt);
+  > * {
+    flex: 1;
+  }
+}

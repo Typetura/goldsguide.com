@@ -2,15 +2,10 @@
   background: var(--background-alt);
   color: var(--text-alt);
   outline: 1px solid var(--text);
-  display: grid;
   grid-template-columns: var(--grid);
   column-gap: var(--gutter);
-  padding: 5rem 0 50vh;
-	box-shadow: var(--shadow);
-
-  img {
-    outline: 1px solid var(--background);
-  }
+  padding: 5rem 0 25vh;
+  box-shadow: var(--shadow);
 
   ul,
   ol {
@@ -35,11 +30,71 @@
 
   li,
   blockquote {
+    margin-left: auto;
     opacity: 0.85;
     transition: opacity var(--transition);
     &:hover {
       opacity: 1;
     }
+  }
+
+  hr {
+    opacity: 1;
+    color: var(--primary);
+  }
+
+  figure > iframe {
+    width: 100%;
+  }
+
+  mark {
+    background: url("/assets/images/highlight.svg");
+    background-size: 100% 100%;
+  }
+
+  .twitter-tweet {
+    --primary: #1da1f2;
+    font-size: 0.75rem;
+    background: rgb(247, 249, 250);
+    padding: 0.5rem var(--gutter) 1rem;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+    outline: 1px solid var(--primary);
+    position: relative;
+    font-style: italic;
+    br + br {
+      display: none;
+    }
+    br {
+      margin: 0.5em;
+    }
+    a {
+      position: relative;
+      z-index: 3;
+    }
+    > a[href*='https://twitter.com']
+    {
+      position: static;
+      z-index: 2;
+      text-decoration: none;
+    }
+    > a[href*='https://twitter.com']::after
+    {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .twitter-tweet > p {
+    font-size: 0.9rem;
+    margin: 0 0 0.6rem;
+    font-style: normal;
+  }
+  .twitter-tweet::before {
+    display: none;
   }
 
   figcaption,
@@ -50,8 +105,7 @@
     margin-right: auto;
   }
 
-  h2 {
-    width: 100%;
+  h1 {
     font-family: var(--font-headline);
     font-size: 2rem;
     margin-top: 2rem;
@@ -77,8 +131,7 @@
       margin-bottom: calc(0.2rem + (0.2rem * var(--tt-scale)));
     }
   }
-  h3 {
-    width: 100%;
+  h2 {
     font-family: var(--font-text);
     margin-top: 2rem;
     font-size: 1.1rem;
@@ -96,8 +149,7 @@
       font-size: 1.2rem;
     }
   }
-  h4 {
-    width: 100%;
+  h3 {
     font-family: var(--font-text);
     margin-top: 3rem;
     font-size: 1.2rem;
@@ -110,6 +162,7 @@
 .post-content > * {
   grid-column-start: 2;
   grid-column-end: span 24;
+  width: calc(100% - (var(--gutter) * 2));
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
@@ -122,10 +175,12 @@
 }
 
 .kg-width-wide {
-  max-width: none;
+  width: calc(100% - (var(--gutter) * 2));
+  max-width: var(--max-width);
 }
 .kg-width-full {
-  max-width: none;
+  width: 100%;
+  max-width: 100rem;
   grid-column-start: 1;
   grid-column-end: span 26;
 }
@@ -134,11 +189,101 @@
   display: flex;
   flex-direction: column;
   gap: var(--gutter);
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
 }
 .kg-gallery-row {
   display: flex;
   flex-direction: row;
   gap: var(--gutter);
+}
+
+.kg-bookmark-card {
+  width: 100%;
+  position: relative;
+  border-radius: 0.2rem;
+  outline: 1px solid var(--primary);
+  transition: box-shadow var(--transition);
+  img {
+    outline: none;
+  }
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+}
+
+.kg-bookmark-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  color: currentColor;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.kg-bookmark-container:hover {
+  text-decoration: none;
+}
+
+.kg-bookmark-content {
+  flex-basis: 0;
+  flex-grow: 999;
+  padding: 20px;
+  order: 1;
+}
+
+.kg-bookmark-title {
+  font-weight: 600;
+}
+
+.kg-bookmark-metadata,
+.kg-bookmark-description {
+  margin-top: 0.5em;
+}
+
+.kg-bookmark-metadata {
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kg-bookmark-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.kg-bookmark-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-bottom;
+  margin-right: 0.5em;
+  margin-bottom: 0.05em;
+}
+
+.kg-bookmark-thumbnail {
+  display: flex;
+  flex-basis: 24rem;
+  flex-grow: 1;
+}
+
+.kg-bookmark-thumbnail img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+.kg-bookmark-author {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.kg-bookmark-publisher::before {
+  content: "•";
+  margin: 0 0.5em;
 }

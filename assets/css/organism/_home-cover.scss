@@ -25,15 +25,23 @@
   .entry {
     --tt-scale: 0.6;
   }
+  .tag-feature .entry-content {
+    min-height: 22rem;
+    @media (min-width: 50em) {
+      min-height: auto;
+    }
+  }
   .entry:first-of-type {
     --tt-scale: 1;
     .entry-image {
       flex: 0;
     }
-    &.tag-feature {
-      margin-bottom: calc(var(--gutter) * -1 + 1px);
-      .entry-content {
-        margin: 0 0 0 calc(var(--gutter) * -1);
+    @media (min-width: 50em) {
+      &.tag-feature {
+        margin-bottom: calc(var(--gutter) * -1 + 1px);
+        .entry-content {
+          margin: 0 0 0 calc(var(--gutter) * -1);
+        }
       }
     }
   }

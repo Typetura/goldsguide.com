@@ -1,9 +1,6 @@
 html {
   background: var(--background);
   color: var(--text);
-	@media (prefers-color-scheme: dark) {
-		font-weight: 300;
-	}
 }
 
 body {
@@ -46,10 +43,20 @@ svg {
   height: 1em;
 }
 
-img {
+img,
+iframe[src*="youtube"],
+iframe[src*="vimeo"],
+iframe[src*="twitch"],
+.fluid-width-video-wrapper > * {
   display: block;
   width: 100%;
   height: auto;
+}
+iframe[src*="youtube"],
+iframe[src*="vimeo"],
+iframe[src*="twitch"],
+.fluid-width-video-wrapper > * {
+  aspect-ratio: 16 / 9;
 }
 
 .flex-spacer {
