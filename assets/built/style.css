@@ -1,6 +1,5 @@
 @charset "UTF-8";
 html {
-  --tt-base: 20;
   --tt-scale: 1.2;
   --primary: var(--accent_color);
   --background: var(--accent_color);
@@ -66,7 +65,7 @@ body {
 }
 
 button,
-input[type=button] {
+input[type="button"] {
   cursor: pointer;
 }
 
@@ -99,24 +98,33 @@ svg {
 }
 
 img,
-iframe[src*=youtube],
-iframe[src*=vimeo],
-iframe[src*=twitch],
+iframe[src*="youtube"],
+iframe[src*="vimeo"],
+iframe[src*="twitch"],
 .fluid-width-video-wrapper > * {
   display: block;
   width: 100%;
   height: auto;
 }
 
-iframe[src*=youtube],
-iframe[src*=vimeo],
-iframe[src*=twitch],
+iframe[src*="youtube"],
+iframe[src*="vimeo"],
+iframe[src*="twitch"],
 .fluid-width-video-wrapper > * {
   aspect-ratio: 16/9;
 }
 
 .flex-spacer {
   flex: 1;
+}
+
+.error-content {
+  margin-top: 4rem;
+}
+
+.error-message {
+  --tt-scale: 1.6;
+  text-align: center;
 }
 
 .entry {
@@ -353,7 +361,7 @@ a.entry-link {
     scroll-snap-align: none;
   }
   .category .entry,
-.category .entry:only-child {
+  .category .entry:only-child {
     width: 20rem;
     min-width: 20rem;
     margin: var(--gutter);
@@ -400,6 +408,12 @@ a.entry-link {
 .foot .copyright {
   margin-top: 1rem;
   text-align: center;
+}
+.foot .social-links {
+  margin: var(--gutter);
+  gap: var(--gutter);
+  display: flex;
+  justify-content: center;
 }
 
 .home-cover {
@@ -637,7 +651,7 @@ a.entry-link {
   grid-column-end: 14;
   grid-row-start: 2;
   grid-row-end: 3;
-  margin: 0;
+  margin: 0 0 1px;
   padding: 0;
   max-width: 50rem;
   justify-self: end;
@@ -653,6 +667,26 @@ a.entry-link {
   margin-bottom: -3rem;
   display: flex;
   flex-direction: column;
+}
+
+.page-lede-logo {
+  grid-column-start: 2;
+  grid-column-end: 25;
+  display: block;
+  margin: 0 auto 2rem;
+}
+.page-lede-logo svg {
+  width: 30vw;
+  height: auto;
+  max-width: 8rem;
+  margin: auto;
+}
+
+.page-lede {
+  text-align: center;
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 var(--gutter);
 }
 
 .post-content {
@@ -724,12 +758,14 @@ a.entry-link {
   position: relative;
   z-index: 3;
 }
-.post-content .twitter-tweet > a[href*="https://twitter.com"] {
+.post-content .twitter-tweet > a[href*="https://twitter.com"]
+{
   position: static;
   z-index: 2;
   text-decoration: none;
 }
-.post-content .twitter-tweet > a[href*="https://twitter.com"]::after {
+.post-content .twitter-tweet > a[href*="https://twitter.com"]::after
+{
   content: "";
   position: absolute;
   top: 0;

@@ -12,26 +12,22 @@ Keep this template as lightweight as you can!
 
 --}}
 
+{{> "molecule/nav"}}
+
 <section class="outer error-content">
     <div class="inner">
         <section class="error-message">
-            <h1 class="error-code">{{statusCode}}</h1>
-            <p class="error-description">{{message}}</p>
-            <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
+            <h1 class="error-code primary-headline">{{statusCode}}</h1>
+            <p class="error-description primary-subheadline">{{message}}, <a class="error-link" href="{{@site.url}}">Go to the front page</a></p>
         </section>
     </div>
 </section>
 
 {{!-- Given that people landing on this page didn't find what they
 were looking for, let's give them some alternative stuff to read. --}}
-<aside class="read-more-wrap">
-    <div class="read-more inner">
-        {{#get "posts" include="authors" limit="3" as |more_posts|}}
-            {{#if more_posts}}
-                {{#foreach more_posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            {{/if}}
-        {{/get}}
-    </div>
-</aside>
+
+{{#get "posts" limit="all"}}
+    {{> "organism/home-cover"}}
+{{/get}}
+
+{{> "organism/foot"}}
