@@ -40,6 +40,10 @@ a.entry-link {
   flex: 2;
 }
 
+.entry-excerpt p {
+	margin-top: -0.5rem;
+}
+
 .entry.is-vertical {
   flex-direction: column;
   .entry-image {

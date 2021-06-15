@@ -1,6 +1,6 @@
 html {
   // Typography
-  --tt-base: 18;
+  --tt-base: 20;
   --tt-scale: 1.2;
 
   // COLOR
@@ -16,7 +16,7 @@ html {
   --transition: 0.25s ease;
 
   // GRID
-  --max-width: 1200px;
+  --max-width: 67rem;
   --columns: 6;
   --gutter: 1.5rem;
   --grid: minmax(var(--gutter), 1fr)
