@@ -54,6 +54,11 @@ html {
   background: var(--background);
   color: var(--text);
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    font-weight: 300;
+  }
+}
 
 body {
   margin: 0;
@@ -544,11 +549,15 @@ a.entry-link {
 
 .post-content {
   background: var(--background-alt);
+  color: var(--text-alt);
   outline: 1px solid var(--text);
   display: grid;
   grid-template-columns: var(--grid);
   column-gap: var(--gutter);
   padding: 3rem 0 50vh;
+}
+.post-content img {
+  outline: 1px solid var(--background);
 }
 .post-content ul,
 .post-content ol {
@@ -577,8 +586,12 @@ a.entry-link {
 .post-content blockquote:hover {
   opacity: 1;
 }
-.post-content img {
-  outline: 1px solid var(--background);
+.post-content figcaption,
+.post-content .caption {
+  opacity: 0.85;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .post-content h2 {
   width: 100%;
@@ -642,6 +655,30 @@ a.entry-link {
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.kg-width-wide {
+  max-width: none;
+}
+
+.kg-width-full {
+  max-width: none;
+  grid-column-start: 1;
+  grid-column-end: span 26;
+}
+
+.kg-gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gutter);
 }
 
 .page-header {

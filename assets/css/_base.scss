@@ -1,6 +1,9 @@
 html {
   background: var(--background);
   color: var(--text);
+	@media (prefers-color-scheme: dark) {
+		font-weight: 300;
+	}
 }
 
 body {
