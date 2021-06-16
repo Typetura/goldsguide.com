@@ -13,8 +13,8 @@ into the {body} of the default.hbs template --}}
 	{{> "organism/newsletter"}}
 	
 	<section class="category">
-	{{#get "tags" limit="all" include="count.posts" order="count.posts desc" as |alltags|}}
-	{{#foreach alltags}}
+	{{#get "tags" limit="all" order="count.posts desc" as |tags|}}
+	{{#foreach tags}}
 		{{> "organism/category"}}
 	{{/foreach}}
 	{{/get}}
