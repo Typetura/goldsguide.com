@@ -298,6 +298,51 @@ a.entry-link {
 .category a:hover {
   text-decoration-color: var(--primary);
 }
+.category .category-nav {
+  display: none;
+}
+@media (min-width: 50em) {
+  .category .category-nav {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: max(var(--gutter), calc(50vw - (var(--max-width) / 2)));
+    display: flex;
+    gap: var(--gutter);
+  }
+  .category .category-button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 4rem;
+    color: var(--text);
+    transition: all var(--transition);
+    opacity: 0.5;
+    --tt-key: category-nav;
+    --tt-max: 1400;
+    --tt-ease: linear;
+  }
+  .category .category-button:hover {
+    opacity: 85;
+  }
+  .category .category-button:focus {
+    outline: none;
+    box-shadow: 0 2px 0 0 var(--primary);
+  }
+  .category .category-button svg {
+    stroke-width: 0.5px;
+  }
+}
+@keyframes category-nav {
+  50% {
+    font-size: 1rem;
+  }
+  100% {
+    font-size: 4rem;
+  }
+}
 .category .category-break {
   position: relative;
   margin-top: 3rem;
@@ -375,6 +420,9 @@ a.entry-link {
   }
   .category .entry:last-child {
     margin-right: max(var(--gutter), calc(50vw - (var(--max-width) / 2)));
+  }
+  .category .entry:last-child:not(.tag-feature) {
+    padding-right: 0;
   }
   .category .entry.tag-feature .entry-content {
     margin: 0;
@@ -692,6 +740,23 @@ a.entry-link {
   padding: 0 var(--gutter);
 }
 
+.post-progress {
+  background: var(--primary);
+  width: 0;
+  height: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  animation: post-progress 1s calc(var(--progress) * -1s) linear both paused;
+  z-index: 9;
+}
+
+@keyframes post-progress {
+  to {
+    width: 100%;
+  }
+}
 .post-content {
   background: var(--background-alt);
   color: var(--text-alt);
@@ -790,7 +855,8 @@ a.entry-link {
   margin-left: auto;
   margin-right: auto;
 }
-.post-content h1 {
+.post-content h1,
+.post-content h2 {
   font-family: var(--font-headline);
   font-size: 2rem;
   margin-top: 2rem;
@@ -816,7 +882,7 @@ a.entry-link {
     margin-bottom: calc(0.2rem + (0.2rem * var(--tt-scale)));
   }
 }
-.post-content h2 {
+.post-content h3 {
   font-family: var(--font-text);
   margin-top: 2rem;
   font-size: 1.1rem;
@@ -834,7 +900,16 @@ a.entry-link {
     font-size: 1.2rem;
   }
 }
-.post-content h3 {
+.post-content h4 {
+  font-family: var(--font-text);
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: 350;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+.post-content h5 {
   font-family: var(--font-text);
   margin-top: 3rem;
   font-size: 1.2rem;

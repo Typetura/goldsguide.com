@@ -1,5 +1,18 @@
 <div class="category-break">
 	<h1 class="category-name primary-headline"><a href="{{url}}">{{name}}</a></h1>
+	<nav class="category-nav">
+    <button class="category-button category-prev" onclick="javascript:entryScroll(this,'prev')" title="back">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 16L3 10L9 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+    <button class="category-button category-next" onclick="javascript:entryScroll(this,'next')" title="next">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 4L16 10L10 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M3 10H15.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </nav>
 	<div class="category-entries">
     {{#get "posts" limit="all" filter="tag:{{slug}}" include="tags,authors"}}
 		  {{#foreach posts}}
