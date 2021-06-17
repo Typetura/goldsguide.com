@@ -14,12 +14,6 @@ form[data-members-form].success .message-success,
 form[data-members-form].error .message-error {
   display: block;
 }
-form[data-members-form].success .message-success {
-}
-form[data-members-form].error .message-error {
-  color: var(--red);
-  box-shadow: var(--red) 0 0 0 1px;
-}
 
 form[data-members-form] .button {
   position: relative;

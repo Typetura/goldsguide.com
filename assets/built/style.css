@@ -149,6 +149,24 @@ iframe[src*=twitch],
   text-decoration-color: var(--primary);
 }
 
+.entry-post-visibility {
+  display: none;
+}
+
+.entry-post-visibility--members,
+.entry-post-visibility--paid {
+  display: block;
+}
+
+.entry-private-library-mark {
+  color: var(--primary);
+  padding-right: 0.3em;
+}
+
+.entry-meta {
+  display: flex;
+}
+
 .entry-tag,
 .entry-link {
   display: table;
@@ -595,11 +613,6 @@ form[data-members-form].error .message-error {
   display: block;
 }
 
-form[data-members-form].error .message-error {
-  color: var(--red);
-  box-shadow: var(--red) 0 0 0 1px;
-}
-
 form[data-members-form] .button {
   position: relative;
 }
@@ -739,6 +752,9 @@ form[data-members-form].error .message-error {
 }
 .post-lede .post-byline {
   margin-top: 2rem;
+}
+.post-lede .entry-private-library-mark {
+  color: inherit;
 }
 
 .post-lede-logo {

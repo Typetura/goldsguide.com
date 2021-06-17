@@ -15,6 +15,22 @@
   }
 }
 
+.entry-post-visibility {
+  display: none;
+}
+.entry-post-visibility--members,
+.entry-post-visibility--paid {
+  display: block;
+}
+.entry-private-library-mark {
+  color: var(--primary);
+  padding-right: 0.3em;
+}
+
+.entry-meta {
+  display: flex;
+}
+
 .entry-tag,
 .entry-link {
   display: table;
@@ -41,7 +57,7 @@ a.entry-link {
 }
 
 .entry-excerpt p {
-	margin-top: -0.5rem;
+  margin-top: -0.5rem;
 }
 
 .entry.is-vertical {
@@ -55,7 +71,7 @@ a.entry-link {
   .entry-content {
     --tt-scale: 1.5;
     color: #fff;
-		text-shadow: 0 0.35rem 1rem hsla(0, 0%, 0%, 0.35);
+    text-shadow: 0 0.35rem 1rem hsla(0, 0%, 0%, 0.35);
     height: 100%;
     box-sizing: border-box;
     padding: var(--gutter);
