@@ -4,8 +4,8 @@ html {
   --tt-scale: 1.2;
 
   // COLOR
-  --primary: var(--accent_color);
-  --background: var(--accent_color);
+  --primary: var(--ghost-accent-color);
+  --background: var(--ghost-accent-color);
   --background-alt: #ffffff;
   --text: #353d48;
   --text-alt: #353d48;
@@ -34,7 +34,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   html {
-    --primary: var(--accent_color);
+    --primary: var(--ghost-accent-color);
     --background: #353d48;
     --background-alt: #000000;
     --text: #f7e6c7;

@@ -59,6 +59,10 @@ iframe[src*="twitch"],
   aspect-ratio: 16 / 9;
 }
 
+#ghost-portal-root {
+	display: none;
+}
+
 .flex-spacer {
   flex: 1;
 }

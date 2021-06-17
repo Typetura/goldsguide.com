@@ -1,3 +1,92 @@
+form[data-members-form] .button-loader,
+form[data-members-form] .message-success,
+form[data-members-form] .message-error {
+  display: none;
+}
+
+.message-success svg,
+.message-error svg {
+  position: relative;
+  top: -1px;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+form[data-members-form].success .message-success,
+form[data-members-form].error .message-error {
+  position: fixed;
+  top: 84px;
+  right: 20px;
+  left: 20px;
+  z-index: 9999;
+  margin: 0 auto;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5px;
+}
+form[data-members-form].success .message-success {
+}
+form[data-members-form].error .message-error {
+  color: var(--red);
+  box-shadow: var(--red) 0 0 0 1px;
+}
+
+form[data-members-form] .button {
+  position: relative;
+}
+
+/*-- Loading --*/
+
+/* Hide button text */
+form[data-members-form].loading .button-content {
+  visibility: hidden;
+}
+
+/* Show loading spinner */
+form[data-members-form].loading .button-loader {
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  margin-left: -19px;
+  height: 31px;
+  transform: scale(0.7);
+}
+
+/*-- Show success message on success --*/
+form[data-members-form].success .message-success {
+  display: block;
+}
+
+/*-- Show error message on error --*/
+form[data-members-form].error .message-error {
+  display: block;
+}
+
+.site-account {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vw;
+}
+
+.subscriber-box {
+  margin: 0 auto;
+  max-width: 560px;
+  width: 100%;
+}
+
+.subscriber-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .newsletter {
   max-width: 50rem;
   margin: 6rem auto 0;
@@ -10,16 +99,19 @@
   bottom: 1rem;
   bottom: calc(1rem + env(safe-area-inset-bottom));
   top: 1rem;
-  display: flex;
   background: var(--text);
   border-radius: 20rem;
   padding: 0.25rem;
-  gap: 0.25rem;
   width: calc(100% - (var(--gutter) * 2));
   max-width: 30rem;
   box-shadow: var(--shadow);
   margin: 0 auto;
   z-index: 9;
+}
+.newsletter-form-group {
+  width: 100%;
+  display: flex;
+  gap: 0.25rem;
 }
 .newsletter-input {
   border: none;

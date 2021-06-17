@@ -1,18 +1,13 @@
 .post-progress {
   background: var(--primary);
   width: 0;
-  height: 2px;
+  height: 3px;
   position: fixed;
   top: 0;
   left: 0;
+  width: calc(100% * var(--progress));
   max-width: 100%;
-  animation: post-progress 1s calc(var(--progress) * -1s) linear both paused;
-  z-index: 9;
-}
-@keyframes post-progress {
-  to {
-    width: 100%;
-  }
+  z-index: 10;
 }
 
 .post-content {
