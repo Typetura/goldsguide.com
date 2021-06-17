@@ -4,30 +4,15 @@ form[data-members-form] .message-error {
   display: none;
 }
 
-.message-success svg,
-.message-error svg {
-  position: relative;
-  top: -1px;
-  margin-right: 5px;
-  width: 15px;
-  height: 15px;
+form[data-members-form] .message-success,
+form[data-members-form] .message-error {
+  color: var(--background-alt);
+  padding: 1rem var(--gutter);
+  text-align: center;
 }
-
 form[data-members-form].success .message-success,
 form[data-members-form].error .message-error {
-  position: fixed;
-  top: 84px;
-  right: 20px;
-  left: 20px;
-  z-index: 9999;
-  margin: 0 auto;
-  padding: 10px 0;
-  color: #fff;
-  font-size: 1.4rem;
-  line-height: 1.5em;
-  font-weight: 500;
-  text-align: center;
-  border-radius: 5px;
+  display: block;
 }
 form[data-members-form].success .message-success {
 }
@@ -44,17 +29,12 @@ form[data-members-form] .button {
 
 /* Hide button text */
 form[data-members-form].loading .button-content {
-  visibility: hidden;
+  display: none;
 }
 
 /* Show loading spinner */
 form[data-members-form].loading .button-loader {
-  position: absolute;
-  left: 50%;
-  display: inline-block;
-  margin-left: -19px;
-  height: 31px;
-  transform: scale(0.7);
+  display: block;
 }
 
 /*-- Show success message on success --*/
@@ -100,7 +80,7 @@ form[data-members-form].error .message-error {
   bottom: calc(1rem + env(safe-area-inset-bottom));
   top: 1rem;
   background: var(--text);
-  border-radius: 20rem;
+  border-radius: 1.7rem;
   padding: 0.25rem;
   width: calc(100% - (var(--gutter) * 2));
   max-width: 30rem;
@@ -116,7 +96,7 @@ form[data-members-form].error .message-error {
 .newsletter-input {
   border: none;
   background: #ffffff;
-  border-radius: 20rem;
+  border-radius: 1.65rem;
   flex: 1;
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
@@ -134,6 +114,9 @@ form[data-members-form].error .message-error {
   padding: 0.75rem 1.25rem;
   font-family: inherit;
   box-shadow: inset var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .newsletter-kicker {
