@@ -65,6 +65,11 @@ body {
   box-shadow: 0 0 0 3px var(--primary);
 }
 
+a,
+button {
+  touch-action: manipulation;
+}
+
 button,
 input[type=button] {
   cursor: pointer;
