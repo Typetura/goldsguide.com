@@ -13,10 +13,11 @@ into the {body} of the default.hbs template --}}
 	{{> "organism/newsletter"}}
 	
 	<section class="category">
-	{{#get "tags" limit="all" order="count.posts desc" as |tags|}}
-	{{#foreach tags}}
+	
+	{{#get "tags" filter="slug:[whats-new,whats-next]" as |tags|}}
+		{{#foreach tags}}
 		{{> "organism/category"}}
-	{{/foreach}}
+		{{/foreach}}
 	{{/get}}
 	</section>
 </main>
