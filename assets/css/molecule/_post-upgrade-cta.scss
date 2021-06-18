@@ -1,0 +1,16 @@
+.gh-post-upgrade-cta-content {
+  background: none !important;
+  border-radius: 0 !important;
+  border-top: 2px solid var(--primary) !important;
+  margin-top: 3rem !important;
+  padding-top: 0 !important;
+  * {
+    color: var(--text) !important;
+  }
+  .gh-btn,
+  .gh-btn:hover {
+    background: var(--primary) !important;
+    box-shadow: inset var(--shadow) !important;
+    border-radius: 3rem !important;
+  }
+}
