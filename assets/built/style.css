@@ -798,7 +798,7 @@ form[data-members-form].error .message-error {
   }
 }
 .post-image {
-  grid-column-start: 1;
+  grid-column-start: 2;
   grid-column-end: 14;
   grid-row-start: 2;
   grid-row-end: 3;
@@ -807,6 +807,9 @@ form[data-members-form].error .message-error {
   max-width: 50rem;
   justify-self: end;
   filter: drop-shadow(var(--shadow));
+}
+.post.tag-feature .post-image {
+  grid-column-start: 1;
 }
 
 .post-lede-content {
@@ -850,6 +853,13 @@ form[data-members-form].error .message-error {
   width: calc(100% * var(--progress));
   max-width: 100%;
   z-index: 10;
+}
+
+.post {
+  --column-width: 38rem;
+}
+.post.tag-feature {
+  --column-width: 46rem;
 }
 
 .post-content {
@@ -946,7 +956,7 @@ form[data-members-form].error .message-error {
 .post-content figcaption,
 .post-content .caption {
   opacity: 0.85;
-  max-width: 40rem;
+  max-width: var(--column-width);
   margin-left: auto;
   margin-right: auto;
 }
@@ -964,7 +974,7 @@ form[data-members-form].error .message-error {
   grid-column-start: 2;
   grid-column-end: span 24;
   width: calc(100% - (var(--gutter) * 2));
-  max-width: 40rem;
+  max-width: var(--column-width);
   margin-left: auto;
   margin-right: auto;
 }

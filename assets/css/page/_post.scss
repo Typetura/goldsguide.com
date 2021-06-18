@@ -10,6 +10,13 @@
   z-index: 10;
 }
 
+.post {
+  --column-width: 38rem;
+  &.tag-feature {
+    --column-width: 46rem;
+  }
+}
+
 .post-content {
   background: var(--background-alt);
   color: var(--text-alt);
@@ -113,7 +120,7 @@
   figcaption,
   .caption {
     opacity: 0.85;
-    max-width: 40rem;
+    max-width: var(--column-width);
     margin-left: auto;
     margin-right: auto;
   }
@@ -132,7 +139,7 @@
   grid-column-start: 2;
   grid-column-end: span 24;
   width: calc(100% - (var(--gutter) * 2));
-  max-width: 40rem;
+  max-width: var(--column-width);
   margin-left: auto;
   margin-right: auto;
 }
