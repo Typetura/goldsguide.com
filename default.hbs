@@ -7,7 +7,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="disable-adaptations" content="watch" />
     <meta
       name="theme-color"
       content="{{@site.accent_color}}"
@@ -27,7 +28,14 @@
       type="text/css"
       href="https://cdn.typetura.com/rio/typetura.css"
     />
-
+		
+	  <link rel="manifest"
+        href="/manifest.json" />
+		
+		<link rel="apple-touch-icon" href="/assets/images/icon.png" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="content="black-translucent" />
+	
     {{! This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag }}
     {{ghost_head}}
@@ -39,6 +47,13 @@
 
     {{! Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries }}
     <script src="{{asset "js/goldsguide.js"}}"></script>
+    {{! Scripts - Service workers handle web app capable logic }}
+    <script src="/service-worker.js"}}"></script>
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/service-worker.js');
+			}
+		</script>
 
     {{! Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag }}
     {{ghost_foot}}

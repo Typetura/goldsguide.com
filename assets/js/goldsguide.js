@@ -85,12 +85,10 @@ if (action == "subscribe" && success === "false") {
   document.rootElement.classList.add("subscribe-failure");
 }
 var subscribeButton = document.querySelector(".newsletter-join");
-var closeButton = document.querySelector(".subscribe-notification .subscribe-close-button");
+var closeButton = document.querySelector(
+  ".subscribe-notification .subscribe-close-button"
+);
 
-subscribeButton.addEventListener('click', event => {
-  document.querySelector(".subscribe-overlay form").classList.remove('');
-  // document.querySelector(".subscribe-email").val("");
+subscribeButton.addEventListener("click", (event) => {
+  document.querySelector(".subscribe-overlay form").classList.remove("");
 });
-// closeButton.addEventListener('click', event => {
-//   document.querySelector(".subscribe-notification").classList.add("close");
-// });
