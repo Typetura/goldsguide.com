@@ -11,10 +11,10 @@ into the {body} of the default.hbs template --}}
 	{{> "organism/home-cover"}}
 
 	{{> "organism/newsletter"}}
-	
+
 	<section class="category">
-	
-	{{#get "tags" filter="slug:[whats-new,whats-next]" as |tags|}}
+
+	{{#get "tags" filter="slug:[whats-good,whats-next]" as |tags|}}
 		{{#foreach tags}}
 		{{> "organism/category"}}
 		{{/foreach}}
