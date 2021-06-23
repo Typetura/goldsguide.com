@@ -573,7 +573,7 @@ a.entry-link {
 
 .home-masthead {
   max-width: var(--max-width);
-  margin: 4rem auto 2rem;
+  margin: min(6vw, 4rem) auto min(1vw, 1rem);
   padding: 1rem var(--gutter);
 }
 
@@ -603,12 +603,18 @@ a.entry-link {
   justify-content: flex-start;
   opacity: 0.85;
   transition: opacity var(--transition);
+  white-space: nowrap;
 }
 .main-nav:hover {
   opacity: 1;
 }
 .main-nav a {
   text-decoration-color: transparent;
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+.main-nav > a {
+  margin-right: 0;
 }
 .main-nav a:hover {
   text-decoration-color: var(--primary);
@@ -620,7 +626,6 @@ a.entry-link {
   margin: 0;
   padding: 0;
   align-content: baseline;
-  gap: 1rem;
   position: relative;
   overflow: auto;
   width: calc(100% - 5rem);
@@ -857,8 +862,10 @@ a.entry-link {
 }
 .home-cover .gold-bars {
   position: absolute;
-  width: 50vw;
-  height: 60vw;
+  width: 100vw;
+  height: 130vw;
+  max-width: 42rem;
+  max-height: 60rem;
   right: 0;
   top: -14rem;
   color: var(--primary);
@@ -1185,7 +1192,7 @@ form[data-members-form].error .message-error {
 .page-lede-logo svg {
   width: 30vw;
   height: auto;
-  max-width: 8rem;
+  max-width: 12rem;
   margin: auto;
 }
 

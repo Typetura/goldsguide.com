@@ -7,11 +7,17 @@
   justify-content: flex-start;
   opacity: 0.85;
   transition: opacity var(--transition);
+  white-space: nowrap;
   &:hover {
     opacity: 1;
   }
   a {
     text-decoration-color: transparent;
+    white-space: nowrap;
+    margin-right: 1rem;
+  }
+  > a {
+    margin-right: 0;
   }
   a:hover {
     text-decoration-color: var(--primary);
@@ -23,7 +29,6 @@
     margin: 0;
     padding: 0;
     align-content: baseline;
-    gap: 1rem;
     position: relative;
     overflow: auto;
     width: calc(100% - 5rem);

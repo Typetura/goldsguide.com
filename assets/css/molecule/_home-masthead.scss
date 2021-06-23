@@ -1,6 +1,6 @@
 .home-masthead {
   max-width: var(--max-width);
-  margin: 4rem auto 2rem;
+  margin: min(6vw, 4rem) auto min(1vw, 1rem);
   padding: 1rem var(--gutter);
 }
 
