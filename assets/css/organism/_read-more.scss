@@ -1,13 +1,15 @@
 .read-more {
-  display: flex;
   max-width: var(--max-width);
   padding: var(--gutter);
   margin: 6rem auto 3rem;
-  gap: var(--gutter);
   outline: 1px solid var(--text);
   box-shadow: var(--shadow);
   background: var(--background-alt);
   color: var(--text-alt);
+}
+.read-more-container {
+  display: flex;
+  gap: var(--gutter);
   > * {
     flex: 1;
   }
