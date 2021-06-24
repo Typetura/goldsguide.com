@@ -1094,7 +1094,13 @@ form[data-members-form].error .message-error {
 
 .read-more-container {
   display: flex;
+  flex-direction: column;
   gap: var(--gutter);
+}
+@media (min-width: 50em) {
+  .read-more-container {
+    flex-direction: row;
+  }
 }
 .read-more-container > * {
   flex: 1;
