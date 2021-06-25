@@ -1278,6 +1278,12 @@ form[data-members-form].error .message-error {
   background: url("/assets/images/highlight.svg");
   background-size: 100% 100%;
 }
+.post-content .instagram-media {
+  margin: 1rem auto !important;
+}
+.post-content .instagram-media::before {
+  display: none !important;
+}
 .post-content .twitter-tweet {
   --primary: #1da1f2;
   font-size: 0.75rem;

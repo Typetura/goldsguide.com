@@ -2,7 +2,7 @@
   "name": "goldsguide",
   "description": "What’s new and what’s next",
   "demo": "https://demo.ghost.io",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"

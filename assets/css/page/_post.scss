@@ -74,9 +74,9 @@
   }
 
   .instagram-media {
+    margin: 1rem auto !important;
     &::before {
-      display: none;
-      margin: 1rem auto !important;
+      display: none !important;
     }
   }
 
