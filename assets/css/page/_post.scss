@@ -73,6 +73,13 @@
     background-size: 100% 100%;
   }
 
+  .instagram-media {
+    &::before {
+      display: none;
+      margin: 1rem auto !important;
+    }
+  }
+
   .twitter-tweet {
     --primary: #1da1f2;
     font-size: 0.75rem;
@@ -83,6 +90,17 @@
     outline: 1px solid var(--primary);
     position: relative;
     font-style: italic;
+    &::before {
+      content: "";
+      background: none;
+      background-image: url("/assets/images/twitter.svg");
+      background-size: cover;
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      bottom: -0.7rem;
+      left: -0.7rem;
+    }
     br + br {
       display: none;
     }
@@ -113,9 +131,6 @@
     font-size: 0.9rem;
     margin: 0 0 0.6rem;
     font-style: normal;
-  }
-  .twitter-tweet::before {
-    display: none;
   }
 
   figcaption,

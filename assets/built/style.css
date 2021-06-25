@@ -1289,6 +1289,17 @@ form[data-members-form].error .message-error {
   position: relative;
   font-style: italic;
 }
+.post-content .twitter-tweet::before {
+  content: "";
+  background: none;
+  background-image: url("/assets/images/twitter.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  bottom: -0.7rem;
+  left: -0.7rem;
+}
 .post-content .twitter-tweet br + br {
   display: none;
 }
@@ -1316,9 +1327,6 @@ form[data-members-form].error .message-error {
   font-size: 0.9rem;
   margin: 0 0 0.6rem;
   font-style: normal;
-}
-.post-content .twitter-tweet::before {
-  display: none;
 }
 .post-content figcaption,
 .post-content .caption {
