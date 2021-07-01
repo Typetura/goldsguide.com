@@ -638,11 +638,17 @@ a.entry-link {
   padding-right: 3rem;
 }
 .main-nav .main-nav-overflow {
+  --gradient-stop: rgba(246, 195, 101, 0);
   position: relative;
   width: 1rem;
   transform: translatex(calc(-1rem + 1px));
-  background: linear-gradient(90deg, rgba(249, 189, 77, 0), var(--background));
+  background: linear-gradient(90deg, var(--gradient-stop), var(--background));
   align-self: stretch;
+}
+@media (prefers-color-scheme: dark) {
+  .main-nav .main-nav-overflow {
+    --gradient-stop: rgba(53, 61, 72, 0);
+  }
 }
 
 .gh-post-upgrade-cta-content {

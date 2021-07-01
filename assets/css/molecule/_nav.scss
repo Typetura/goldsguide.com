@@ -41,14 +41,14 @@
     }
   }
   .main-nav-overflow {
+    --gradient-stop: #{rgba(#f6c365, 0)};
     position: relative;
     width: 1rem;
     transform: translatex(calc(-1rem + 1px));
-    background: linear-gradient(
-      90deg,
-      hsla(39, 94%, 64%, 0),
-      var(--background)
-    );
+    background: linear-gradient(90deg, var(--gradient-stop), var(--background));
     align-self: stretch;
+    @media (prefers-color-scheme: dark) {
+      --gradient-stop: #{rgba(#353d48, 0)};
+    }
   }
 }
