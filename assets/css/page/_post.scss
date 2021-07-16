@@ -83,48 +83,14 @@
   .twitter-tweet {
     --primary: #1da1f2;
     font-size: 0.75rem;
-    background: rgb(247, 249, 250);
-    padding: 0.5rem var(--gutter) 1rem;
-    margin: 0 auto;
-    border-radius: 0.25rem;
-    outline: 1px solid var(--primary);
-    position: relative;
-    font-style: italic;
     &::before {
-      content: "";
-      background: none;
-      background-image: url("/assets/images/twitter.svg");
-      background-size: cover;
-      width: 1.5rem;
-      height: 1.5rem;
-      position: absolute;
-      bottom: -0.7rem;
-      left: -0.7rem;
+      display: none;
     }
     br + br {
       display: none;
     }
     br {
       margin: 0.5em;
-    }
-    a {
-      position: relative;
-      z-index: 3;
-    }
-    > a[href*='https://twitter.com']
-    {
-      position: static;
-      z-index: 2;
-      text-decoration: none;
-    }
-    > a[href*='https://twitter.com']::after
-    {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
     }
   }
   .twitter-tweet > p {

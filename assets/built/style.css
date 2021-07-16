@@ -1293,47 +1293,15 @@ form[data-members-form].error .message-error {
 .post-content .twitter-tweet {
   --primary: #1da1f2;
   font-size: 0.75rem;
-  background: #f7f9fa;
-  padding: 0.5rem var(--gutter) 1rem;
-  margin: 0 auto;
-  border-radius: 0.25rem;
-  outline: 1px solid var(--primary);
-  position: relative;
-  font-style: italic;
 }
 .post-content .twitter-tweet::before {
-  content: "";
-  background: none;
-  background-image: url("/assets/images/twitter.svg");
-  background-size: cover;
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  bottom: -0.7rem;
-  left: -0.7rem;
+  display: none;
 }
 .post-content .twitter-tweet br + br {
   display: none;
 }
 .post-content .twitter-tweet br {
   margin: 0.5em;
-}
-.post-content .twitter-tweet a {
-  position: relative;
-  z-index: 3;
-}
-.post-content .twitter-tweet > a[href*="https://twitter.com"] {
-  position: static;
-  z-index: 2;
-  text-decoration: none;
-}
-.post-content .twitter-tweet > a[href*="https://twitter.com"]::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 .post-content .twitter-tweet > p {
   font-size: 0.9rem;
