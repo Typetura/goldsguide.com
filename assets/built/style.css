@@ -8,7 +8,7 @@ html {
   --background-alt: #ffffff;
   --text: #353d48;
   --text-alt: #353d48;
-  --shadow: 0 0.5rem 1.7rem rgba(206, 108, 19, 0.3);
+  --shadow: 0 0.5rem 1.7rem hsla(28, 83%, 44%, 0.3);
   --transition: 0.25s ease;
   --max-width: 67rem;
   --columns: 6;
@@ -869,9 +869,9 @@ a.entry-link {
 .home-cover .gold-bars {
   position: absolute;
   width: 100vw;
-  height: 130vw;
+  height: 120vw;
   max-width: 42rem;
-  max-height: 60rem;
+  max-height: 50rem;
   right: 0;
   top: -14rem;
   color: var(--primary);
@@ -1478,6 +1478,14 @@ form[data-members-form].error .message-error {
   padding: 0 var(--gutter);
   margin: 4rem auto 2rem;
   text-align: center;
+}
+
+.page-accent-color {
+  background: var(--primary);
+  --shadow: 0 0.5rem 1.7rem hsla(0, 0%, 0%, 0.16);
+}
+.page-accent-color .main-nav-overflow {
+  display: none;
 }
 
 .tag-posts {

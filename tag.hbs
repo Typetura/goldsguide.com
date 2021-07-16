@@ -1,10 +1,12 @@
+{{#tag}}
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 
+<div {{#if accent_color}}class="page-accent-color" style="--primary: {{accent_color}}"{{/if}}>
+
 {{> "molecule/nav"}}
 
-{{#tag}}
 <header class="page-header">
   <a href="/" class="page-lede-logo">
     {{> icons/logo}}
@@ -17,6 +19,7 @@
     {{/if}}
 
 </header>
+
 {{/tag}}
 
 <main id="site-main" class="site-main outer">
@@ -32,3 +35,5 @@
 
 
 {{> "organism/foot"}}
+
+</div>

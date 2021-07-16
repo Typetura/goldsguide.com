@@ -1,3 +1,11 @@
+.page-accent-color {
+  background: var(--primary);
+  --shadow: 0 0.5rem 1.7rem hsla(0, 0%, 0%, 0.16);
+  .main-nav-overflow {
+    display: none;
+  }
+}
+
 .tag-posts {
   max-width: var(--max-width);
   padding: var(--gutter);
