@@ -1248,11 +1248,23 @@ form[data-members-form].error .message-error {
 .post-content ul,
 .post-content ol {
   list-style-position: outside;
-  padding: 0;
+  padding: 0 0 0 2rem;
 }
 .post-content ul li::marker {
-  content: "✦  ";
-  color: var(--primary);
+  content: "✦ ";
+}
+.post-content li::marker {
+  color: #f1a20e;
+  font-weight: 800;
+  font-size: 0.8em;
+}
+@media (prefers-color-scheme: dark) {
+  .post-content li::marker {
+    color: #f8d28b;
+  }
+}
+.post-content li {
+  padding-left: 0.3em;
 }
 .post-content blockquote {
   padding-left: 0;
