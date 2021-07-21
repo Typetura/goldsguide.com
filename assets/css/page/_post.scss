@@ -79,8 +79,23 @@
   }
 
   mark {
-    background: url("/assets/images/highlight.svg");
+    background-color: transparent;
+    background-image: url("/assets/images/highlight.svg");
     background-size: 100% 100%;
+    color: inherit;
+    @media (prefers-color-scheme: dark) {
+      background-image: url("/assets/images/highlight-dark.svg");
+    }
+  }
+
+  > p:last-of-type::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: url("/assets/images/bar-endmark.png");
+    background-size: cover;
+    margin-left: 0.5em;
   }
 
   .instagram-media {

@@ -582,6 +582,11 @@ a.entry-link {
   mix-blend-mode: normal;
   filter: drop-shadow(1.5px 3px 2px #d38d0a) drop-shadow(-0.5px -1.5px 0 #ffe3af);
 }
+@media (prefers-color-scheme: dark) {
+  .home-masthead-logo a {
+    filter: drop-shadow(1.5px 3px 2px #000);
+  }
+}
 
 .home-masthead-logo svg {
   width: 60vw;
@@ -1295,8 +1300,24 @@ form[data-members-form].error .message-error {
   width: 100%;
 }
 .post-content mark {
-  background: url("/assets/images/highlight.svg");
+  background-color: transparent;
+  background-image: url("/assets/images/highlight.svg");
   background-size: 100% 100%;
+  color: inherit;
+}
+@media (prefers-color-scheme: dark) {
+  .post-content mark {
+    background-image: url("/assets/images/highlight-dark.svg");
+  }
+}
+.post-content > p:last-of-type::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url("/assets/images/bar-endmark.png");
+  background-size: cover;
+  margin-left: 0.5em;
 }
 .post-content .instagram-media {
   margin: 1rem auto !important;

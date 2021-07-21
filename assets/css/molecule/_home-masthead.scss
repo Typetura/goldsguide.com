@@ -9,6 +9,9 @@
   mix-blend-mode: normal;
   filter: drop-shadow(1.5px 3px 2px #d38d0a)
     drop-shadow(-0.5px -1.5px 0 #ffe3af);
+  @media (prefers-color-scheme: dark) {
+    filter: drop-shadow(1.5px 3px 2px #000);
+  }
 }
 
 .home-masthead-logo svg {
