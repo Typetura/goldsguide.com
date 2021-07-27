@@ -40,8 +40,13 @@
 
     {{{body}}}
 
+    {{! Trigger events with JavaScript }}
+    <script defer data-domain="goldsguide.com" src="https://plausible.io/js/plausible.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
     {{! Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries }}
     <script src="{{asset "js/goldsguide.js"}}"></script>
+
     {{! Scripts - Service workers handle web app capable logic }}
     <script src="/service-worker.js"}}"></script>
 		<script>

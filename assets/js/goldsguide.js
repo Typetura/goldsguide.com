@@ -78,6 +78,7 @@ var action = getParameterByName("action");
 var success = getParameterByName("success");
 
 if (action == "subscribe" && (success === null || success === "true")) {
+  plausible("Subscribe");
   document.rootElement.classList.add("subscribe-success");
 }
 
