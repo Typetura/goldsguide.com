@@ -2,8 +2,9 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-
 <div {{#if accent_color}}class="page-accent-color" style="--primary: {{accent_color}}"{{/if}}>
+
+{{!-- {{> molecule/nav}} --}}
 
 <header class="page-header">
   <a href="/" class="page-lede-logo">
