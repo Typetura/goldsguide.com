@@ -1134,9 +1134,6 @@ form[data-members-form].error .message-error {
 .post-lede .post-lead-spacer-2 {
   flex: 2;
 }
-.post-lede .post-byline {
-  margin-top: 2rem;
-}
 .post-lede .entry-private-library-mark {
   color: inherit;
 }
@@ -1153,29 +1150,6 @@ form[data-members-form].error .message-error {
   max-width: 12rem;
 }
 
-@media (min-width: 60em) {
-  .post-lede {
-    display: grid;
-    padding: 0;
-    margin: 0;
-  }
-  .post-lede::after {
-    display: block;
-    content: "";
-    width: 1px;
-    background: var(--text);
-    grid-column-end: 14;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: var(--gutter) var(--gutter) -3rem 0;
-    z-index: 2;
-    justify-self: end;
-  }
-
-  .post-lede-logo {
-    margin: var(--gutter) 0 0;
-  }
-}
 .post-image {
   grid-column-start: 2;
   grid-column-end: 14;
@@ -1197,11 +1171,41 @@ form[data-members-form].error .message-error {
   grid-column-end: 25;
   grid-row-start: 2;
   grid-row-end: 3;
-  margin-bottom: -3rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
 }
 
+@media (min-width: 60em) {
+  .post-lede {
+    display: grid;
+    padding: 0;
+    margin: 0;
+  }
+  .post-lede::after {
+    display: block;
+    content: "";
+    width: 1px;
+    background: var(--text);
+    grid-column-end: 14;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: var(--gutter) var(--gutter) -3rem 0;
+    z-index: 2;
+    justify-self: end;
+  }
+  .post-lede .post-byline {
+    margin-top: 2rem;
+  }
+
+  .post-lede-logo {
+    margin: var(--gutter) 0 0;
+  }
+
+  .post-lede-content {
+    margin-bottom: -3rem;
+  }
+}
 .page-lede-logo {
   grid-column-start: 2;
   grid-column-end: 25;
