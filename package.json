@@ -1,8 +1,8 @@
 {
   "name": "goldsguide",
-  "description": "What’s new and what’s next",
+  "description": "What’s good and what’s next",
   "demo": "https://demo.ghost.io",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
