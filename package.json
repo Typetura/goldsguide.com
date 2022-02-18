@@ -1,8 +1,8 @@
 {
   "name": "goldsguide",
-  "description": "What’s next for tech, media, and style.",
-  "demo": "https://demo.ghost.io",
-  "version": "1.1.1",
+  "description": "The guide to good information.",
+  "demo": "https://goldsguide.com",
+  "version": "1.1.2",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
