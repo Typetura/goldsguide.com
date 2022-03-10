@@ -15,7 +15,7 @@ into the {body} of the default.hbs template --}}
 
 	<section class="category">
 
-	{{#get "tags" filter="slug:[reviews,philosophy]" as |tags|}}
+	{{#get "tags" filter="slug:[read,watch,listen]" as |tags|}}
 		{{#foreach tags}}
 		{{> "organism/category"}}
 		{{/foreach}}
