@@ -6,11 +6,12 @@
         {{/has}}
         {{#has visibility="members"}}
             <h2>Please subscribe to keep reading.</h2>
+            <p>It’s free — just enter your email below and confirm membership to keep reading.</p>
         {{/has}}
         {{#if @member}}
             <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Upgrade your account</a>
         {{else}}
-            <a class="gh-btn" data-portal="signup" style="color:{{accentColor}}">Subscribe now</a>
+            <a class="gh-btn" data-portal="signup" style="color:{{accentColor}}">Join</a>
             <p><small>Already have an account? <a data-portal="signin">Sign in</a></small></p>
         {{/if}}
     </div>
