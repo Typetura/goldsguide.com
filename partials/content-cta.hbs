@@ -2,17 +2,19 @@
 <aside class="gh-post-upgrade-cta">
     <div class="gh-post-upgrade-cta-content" style="background-color: {{accentColor}}">
         {{#has visibility="paid"}}
-            <h2>This post is only available to paying members of Gold’s Guide. <a href="/membership">Learn about membership</a>.</h2>
+            <h2>Reading this post requires a subscription to Gold’s Guide.</h2>
         {{/has}}
         {{#has visibility="members"}}
-            <h2>Please subscribe to keep reading.</h2>
-            <p><small>It’s free — just enter your email below and confirm membership to keep reading.</small></p>
+            <h2>Please join to keep reading.</h2>
+            <p><small>It’s free — but please enter your email to read the full article.</small></p>
         {{/has}}
         {{#if @member}}
             <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Upgrade your account</a>
         {{else}}
             <a class="gh-btn" data-portal="signup" style="color:{{accentColor}}">Join</a>
             <p><small>Already have an account? <a data-portal="signin">Sign in</a></small></p>
+            <p>
+            </p>
         {{/if}}
     </div>
 </aside>
