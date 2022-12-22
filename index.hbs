@@ -15,7 +15,7 @@ into the {body} of the default.hbs template --}}
 
 	<section class="category">
 
-	{{#get "tags" filter="slug:[Original-ideas, Curated-links, AI-or-Human, The-Payday-Email]" as |tags|}}
+	{{#get "tags" filter="slug:[Theory, Practice, Ethics]" as |tags|}}
 		{{#foreach tags}}
 		{{> "organism/category"}}
 		{{/foreach}}
