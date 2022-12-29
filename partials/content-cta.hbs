@@ -6,11 +6,15 @@
                     <p><small>Reading this article requires a paid Gold’s Guide membership.</small></p>
         {{/has}}
         {{#has visibility="members"}}
-            <h2>Members only.</h2>
-            <p><small>These are exclusive ideas — please enter your email and confirm your free membership to keep reading.</small></p>
+            <h2>The rest is for members only</h2>
+<p>Just when it was getting good, right? Lucky for you it’s easy to keep reading — just enter your email to signup for Gold’s Guide. It’s free, for now.
+</p>
+            <p><small>You don’t even need a password</small></p>
         {{/has}}
         {{#if @member}}
-            <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Upgrade your membership</a>
+            <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Please upgrade to premium.</a>
+            <p>This is exclusive to Premium members. Existing members can <a href="https://goldsguide.com/#/portal/account/plans">upgrade here</a>.
+            </p>
         {{else}}
             <a class="gh-btn" data-portal="signup" style="color:{{accentColor}}">Join</a>
             <p><small>Already have an account? <a data-portal="signin">Sign in</a></small></p>
