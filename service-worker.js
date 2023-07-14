@@ -1,5 +1,5 @@
 // use a cacheName for cache versioning
-var cacheName = 'v1.0.1';
+var cacheName = 'v1.0.2';
 
 // during the install phase you usually want to cache static assets
 self.addEventListener('install', function(e) {
@@ -7,8 +7,6 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
       return cache.addAll([
-        './',
-        './assets/built/style.css',
         './assets/js/goldsguide.js',
 				'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,100..900,0..100,0..1&display=swap'
       ]).then(function() {
