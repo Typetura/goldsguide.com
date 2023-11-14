@@ -1,11 +1,10 @@
 // Remove category navigation components when there is no scrollable area
 var categoryEntries = document.querySelectorAll(".category-entries");
-for (entry of categoryEntries) {
-  if (entry.scrollWidth <= entry.clientWidth) {
-    entry.parentElement.removeChild(
-      entry.parentElement.querySelector(".category-nav")
-    );
-  }
+for (let i = 0; i < categoryEntries.length; i++) {
+  const entry = categoryEntries[i];
+  entry.parentElement.removeChild(
+    entry.parentElement.querySelector(".category-nav")
+  );
 }
 
 // Arrow scrollers for category sections on the home page
@@ -32,7 +31,7 @@ if (entry) {
       var entryHeight = entry.offsetHeight;
       var viewportHeight = window.innerHeight;
       var topSpace = entry.offsetTop;
-      var scrollDepth = window.pageYOffset;
+      var scrollDepth = window.scrollY;
 
       if (viewportHeight < entryHeight + topSpace) {
         var progress = scrollDepth / (entryHeight - viewportHeight + topSpace);

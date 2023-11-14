@@ -41,4 +41,4 @@ You can add your own SVG icons in the same manner.
 
 # Copyright & License
 
-Copyright (c) 2021 Golds Guide & Typetura. All rights reserved.
+Copyright (c) 2023 Golds Guide & Typetura. All rights reserved.
