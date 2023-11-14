@@ -1042,7 +1042,7 @@ form[data-members-form].error .message-error {
 
 .newsletter-form {
   position: sticky;
-  bottom: auto;
+  bottom: auto !important;
   bottom: calc(1rem + env(safe-area-inset-bottom));
   top: 1rem;
   background: var(--text);

@@ -48,12 +48,6 @@
     <script src="{{asset "js/goldsguide.js"}}"></script>
 
     {{! Scripts - Service workers handle web app capable logic }}
-    <script src="/service-worker.js"}}"></script>
-		<script>
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('/service-worker.js');
-			}
-		</script>
 
     {{! Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag }}
     {{ghost_foot}}
