@@ -2,23 +2,41 @@
 <aside class="gh-post-upgrade-cta">
     <div class="gh-post-upgrade-cta-content" style="background-color: {{accentColor}}">
         {{#has visibility="paid"}}
-            <h2>Members only.</h2>
-                    <p><small>Reading this article requires a paid Gold’s Guide membership.</small></p>
-        {{/has}}
-        {{#has visibility="members"}}
-            <h2>🔓</h2>
-            <h2>The rest is for members only</h2>
-<p>Just when it was getting good, right? Luckily it’s easy to keep reading — just enter your email to signup for Gold’s Guide. It’s free.
+            <h2>Subscribe to read the full guide.</h2>
+<p>Get full access to <u>Gold’s Guide</u> for <strong>$10 per month</strong> or <strong>$100 per year</strong>.</p>
+
+<p>New guides are published every two weeks and appraise the credibility, profitability, and key takeaways of a source. Each guide evaluates the credibility, profitability, and takeaways of a source between one and five stars — these three scores are then averaged into a final verdict. 
 </p>
-            <p><small>You don’t even need a password.</small></p>
+<p>Members also get access to an exclusive podcast version of each guide narrated by the author.
+</p>     
+<p>
+Read a free sample:
+</p>
+<ul>
+    <li><a href="/stratechery-2023">Stratechery</a></li>
+    <li><a href="/cnet-2023">CNET</a></li>
+</ul>
+
+   {{/has}}
+        {{#has visibility="members"}}
+            <h1>🔓</h1>
+            <h2>Subscribe to read the full guide.</h2>
+
+<p>To read this full <u>Gold’s Guide</u> appraisal, enter your email below and login. You’ll get instant access to this guide (and new appraisals in your email inbox every two weeks).</p>
+
+<p>New appraisals are published every two weeks and evaluate the credibility, profitability, and key takeaways of a source, Appraisals are also available in audio form narrated by the author.
+</p>
+            
         {{/has}}
         {{#if @member}}
-            <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Please upgrade to premium.</a>
-            <p>This is exclusive to Premium members. Existing members can <a href="https://goldsguide.com/#/portal/account/plans">upgrade here</a>.
+            <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Please upgrade your subscription.</a>
+            <p>This full appraisal is exclusive to <u>Gold’s Guide</u> subscribers. Free readers can <a href="https://goldsguide.com/#/portal/account/plans">upgrade here</a>.
             </p>
         {{else}}
-            <a class="gh-btn" data-portal="signup" style="color:{{accentColor}}">Join</a>
-            <p><small>Already have an account? <a data-portal="signin">Sign in</a></small></p>
+            <a class="gh-btn" data-portal="signup/655bfa4fc467410001157a7c/monthly" style="color:{{accentColor}}">$10 per month</a>
+            <a class="gh-btn" data-portal="signup/655bfa4fc467410001157a7c/yearly" style="color:{{accentColor}}">$100 per year</a>
+            <p><small>New guides are published every two weeks, on the 1st and 15th of each month; if that day falls on a weekend, then new guides are published the preceding Friday.</small></p>
+            <p><small>Already have an account? <a data-portal="signin">Login</a></small></p>
             <p>
             </p>
         {{/if}}
