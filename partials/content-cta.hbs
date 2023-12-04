@@ -1,10 +1,10 @@
 {{{html}}}
 <aside class="gh-post-upgrade-cta">
     <div class="gh-post-upgrade-cta-content" style="background-color: {{accentColor}}">
+    <p><small><i>Already have an account? <a data-portal="signin">Login</a></i></small></p>
         {{#has visibility="paid"}}
             <h2>Subscribe to <u>Gold’s Guide Advance</u></h2>
-<p>This guide will be available for free soon, but <u>Advance</u> subscribers get exclusive access right now.</p>
-
+            <p>This guide will be available for free soon, but <u>Advance</u> subscribers get exclusive access right now.</p>
    {{/has}}
         {{#has visibility="members"}}
             <h2>Sign-up to proceeed</h2>
@@ -17,12 +17,11 @@
             <p>This guide is exclusive to <u>Gold’s Guide Advance</u> subscribers. <a href="#/portal/account/plans">Upgrade here</a>.
             </p>
         {{else}}
+        <br>
+        <p><small>Season 1 of <u>Gold’s Guide</u> focuses on the <a href="/tag/technology">technology media</a>.</small</p>
+        <p><small>New guides are published every other Sunday (subscribers get access to a publishing schedule).</small></p>
             <a class="gh-btn" data-portal="signup/655bfa4fc467410001157a7c/monthly" style="color:{{accentColor}}">$5 per month</a>
             <a class="gh-btn" data-portal="signup/655bfa4fc467410001157a7c/yearly" style="color:{{accentColor}}">$50 per year</a>
-            <p><small>New guides are published on the 1st and 15th of each month; if that day falls on a weekend, then the guide is released the preceding Friday.</small></p>
-            <p><small>Already have an account? <a data-portal="signin">Login</a></small></p>
-            <p>
-            </p>
         {{/if}}
     </div>
 </aside>
