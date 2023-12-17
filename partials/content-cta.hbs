@@ -1,10 +1,10 @@
 {{{html}}}
 <aside class="gh-post-upgrade-cta">
     <div class="gh-post-upgrade-cta-content" style="background-color: {{accentColor}}">
-    <p><small><i>Already have an account? <a data-portal="signin">Login</a></i></small></p>
+    <p><small><i>Already have an account? <mark><a data-portal="signin">Login</a></i></small></p></mark>
         {{#has visibility="paid"}}
-            <h2>Subscribe to <u>Gold’s Guide Advance</u></h2>
-            <p>This guide will be available for free soon, but <u>Advance</u> subscribers get exclusive access right now.</p>
+            <h2 class="aotc">Get ahead of the curve</h2>
+            <p><strong>Go above and beyond</strong> — subscribe to <u>Gold’s Guide Advance</u> </p>
    {{/has}}
         {{#has visibility="members"}}
             <h2>Sign-up to proceeed</h2>
@@ -18,9 +18,11 @@
             </p>
         {{else}}
         <br>
-        <p><small>New guides are published every other Sunday (subscribers get access to a publishing schedule).</small></p>
+        <p><small><mark>Subscribe to <u>Gold’s Guide Advance</u></mark> for exclusive access to new guides two weeks before they get released for free. New guides are published every other Sunday.</small></p>
+            <br>
             <a class="gh-btn" data-portal="signup/655bfa4fc467410001157a7c/monthly" style="color:{{accentColor}}">$5 per month</a>
             <a class="gh-btn" data-portal="signup/655bfa4fc467410001157a7c/yearly" style="color:{{accentColor}}">$50 per year</a>
+        
         <p><small>Season 1 of <u>Gold’s Guide</u> focuses on the <a href="/tag/technology">technology media</a>.</small</p>
         {{/if}}
     </div>
