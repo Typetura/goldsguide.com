@@ -1,29 +1,21 @@
 {{{html}}}
 <aside class="gh-post-upgrade-cta">
     <div class="gh-post-upgrade-cta-content" style="background-color: {{accentColor}}">
-    <p><small><i>Already have an account? <mark><a data-portal="signin">Login</a></i></small></p></mark>
         {{#has visibility="paid"}}
-            <h2 class="aotc">Get ahead of the curve</h2>
-            <p><strong>Go above and beyond</strong> — subscribe to <u>Gold’s Guide Advance</u> </p>
-   {{/has}}
+            <h2>Subscribe to <a href="/advance"><u>advance</u></a>.</h2>
+        {{/has}}
         {{#has visibility="members"}}
-            <h2>Sign-up to proceeed</h2>
-
-<p>Enter your email to join <u>Gold's Guide</u> for instant access to this guide.</p>
-            
+            <h2>Sign-up to keep reading — it’s free.</h2>
+            <p>Just enter your email below.</p>
+        {{/has}}
+        {{#has visibility="tiers"}}
+            <h2>Subscribe to {{tiers}} for access.</h2>
         {{/has}}
         {{#if @member}}
-            <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Upgrade to <u>Advance</u>.</a>
-            <p>This guide is exclusive to <u>Gold’s Guide Advance</u> subscribers. <a href="#/portal/account/plans">Upgrade here</a>.
-            </p>
+            <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Upgrade to <u>advance</u></a>
         {{else}}
-        <br>
-        <p><small><mark>Subscribe to <u>Gold’s Guide Advance</u></mark> for exclusive access to new guides two weeks before they get released for free. New guides are published every other Sunday.</small></p>
-            <br>
-            <a class="gh-btn" data-portal="signup/655bfa4fc467410001157a7c/monthly" style="color:{{accentColor}}">$5 per month</a>
-            <a class="gh-btn" data-portal="signup/655bfa4fc467410001157a7c/yearly" style="color:{{accentColor}}">$50 per year</a>
-        
-        <p><small>Season 1 of <u>Gold’s Guide</u> focuses on the <a href="/tag/technology">technology media</a>.</small</p>
+            <a class="gh-btn" data-portal="signup" style="color:{{accentColor}}">Subscribe now</a>
+            <p><small>Already have an account? <a data-portal="signin">Sign in</a></small></p>
         {{/if}}
     </div>
 </aside>
