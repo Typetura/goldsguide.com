@@ -2,7 +2,16 @@
 <aside class="gh-post-upgrade-cta">
     <div class="gh-post-upgrade-cta-content" style="background-color: {{accentColor}}">
         {{#has visibility="paid"}}
-            <h2>Subscribe to <a href="/advance"><u>advance</u></a>.</h2>
+         <div class="sign-in"><small>Already have an account? <a data-portal="signin">Sign in</a></small></div>
+
+            
+           
+<div class="shoutout">
+<h2>Subscribe to unlock <u>Gold’s Guide Advance</u></h2>
+<p class="get-ahead">
+<strong>Get ahead of the curve</strong> with exclusive analysis into the business models of the most salient brands on the internet — and applicable examples of the competitive advantages that guided them to success.
+        </p>
+            <p><u>Early Adopter Special</u>: $8 per month or $72 per year</p>
         {{/has}}
         {{#has visibility="members"}}
             <h2>Sign-up to keep reading — it’s free.</h2>
@@ -12,10 +21,19 @@
             <h2>Subscribe to {{tiers}} for access.</h2>
         {{/has}}
         {{#if @member}}
-            <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Upgrade to <u>advance</u></a>
+            <a class="gh-btn" data-portal="account/plans" style="color:{{accentColor}}">Upgrade to <u>Advance</u></a>
         {{else}}
             <a class="gh-btn" data-portal="signup" style="color:{{accentColor}}">Subscribe now</a>
-            <p><small>Already have an account? <a data-portal="signin">Sign in</a></small></p>
         {{/if}}
     </div>
 </aside>
+
+<div class="get-ahead">
+      <p>
+        Each <u>Advance</u> edition features extensive research into the key components of that organization or personality’s success. Check out these free samples:
+        </p>
+        <ul>
+            <li><u>Gold’s Guide to <a href="/daring-fireball-2023">Daring Fireball</a></u></li>
+            <li><u>Gold’s Guide to <a href="/stratechery-2023">Stratechery</a></u></li>
+        </ul>
+    </div>
