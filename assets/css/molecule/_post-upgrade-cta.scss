@@ -10,14 +10,15 @@
   * {
     color: var(--text) !important;
   }
-  .gh-btn,
+  .gh-btn{
+    border-radius: .36rem !important;
+    width: 36%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .gh-btn:hover {
     background: var(--primary) !important;
     box-shadow: inset var(--shadow) !important;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: .36rem !important;
-    width: 36%;
   }
 }
 .bullion-button{
