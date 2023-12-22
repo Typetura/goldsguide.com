@@ -2,7 +2,7 @@
   "name": "goldsguide",
   "description": "Appraising Information",
   "demo": "https://goldsguide.com",
-  "version": "2.0",
+  "version": "2.0.0",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
