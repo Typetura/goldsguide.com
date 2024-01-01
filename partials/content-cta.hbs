@@ -6,40 +6,56 @@
         {{#has visibility="paid"}}
            
 <div class="shoutout" style="margin-left:auto; margin-right:auto;">
-<h2 class="primary-headline"><strong>Subscribe to <u>Advance</u></strong></h2>
+<h2 class="primary-headline"><strong>Subscribe to unlock</h2>
 <p class="get-ahead"><strong>$10 per month</strong> or <strong>$100 per year</strong></p>
         {{/has}}
+
         {{#has visibility="members"}}
+
             <h2 class="primary-headline">Sign up to read the rest of this guide — it’s free.</h2>
             <p class="get-ahead">Just enter your email below.</p>
         {{/has}}
+
         {{#has visibility="tiers"}}
+
             <h2 class="primary-headline">Subscribe to {{tiers}} for access.</h2>
         {{/has}}
+
         {{#if @member}}
+
             <a class="bullion-button" data-portal="account/plans" style="color:{{accentColor}}">Upgrade</a>
         {{else}}
-            <a class="bullion-button" data-portal="signup">Unlock</a>
+
+            <a class="bullion-button" data-portal="signup">Advance</a>
+
         {{/if}}
     </div>
 
 <div class="get-ahead">
+
     <p class="primary-subheadline">
-      Insight for innovators.
+      Insights for innovators.
     </p>
+
         <p class="get-ahead">
             Unlock secret strategies leveraged by the world’s leading innovators.
         </p>
 
+<br>
+
         <ul style="text-align: left;">
-            <li style="font-style: normal;"><mark>Extensive research</mark> analyzing how innovations are derived and developed</li>
-            <li style="font-style: normal;">Original data visualizations that provide <mark>context into how innovations are diffused and sustained</mark></li>
-            <li style="font-style: normal;">Applicable examples of proven competitive advantages <mark>that you can apply to your business</mark></li>
-            <li style="font-style: normal;"><mark>Perspective informed by over a decade of experience</mark> working with innovative companies including The Verge, VICE, and Barstool Sports</li>
-            <li style="font-style: normal;">Subscribers receive at least one new edition of Gold’s Guide Advance per month (<mark>~5,000 words + charts & data</mark>)</li>
+            <li style="font-style: normal;"><strong>Extensive research</strong> analyzing how innovations are derived and developed</li>
+            <li style="font-style: normal;"><strong>Original data visualizations</strong> that contextualize how innovations are diffused and sustained</mark></li>
+            <li style="font-style: normal;"><strong>Applicable examples</strong> of proven competitive advantages that you can apply to your business</li>
+            <li style="font-style: normal;"><strong>Informed by over a decade of experience</strong> working with innovative companies including The Verge, VICE, and Barstool Sports</li>
+            <li style="font-style: normal;"><strong>Subscribers receive</strong> at least one new edition of Gold’s Guide Advance per month (~5,000 words + charts & data)</li>
         </ul>
+
+<br>
 
         <p>Check out a free sample: <u>Gold’s Guide to <a href="/daring-fireball-2023">Daring Fireball</a></u>
         </p>
+
+        <a class="bullion-button" data-portal="signup">Subscribe to <u>Gold’s Guide Advance</u></a>
 
 </div>
