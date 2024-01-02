@@ -1,8 +1,8 @@
 {
   "name": "goldsguide",
-  "description": "Information for innovators.",
+  "description": "for innovators.",
   "demo": "https://goldsguide.com",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
