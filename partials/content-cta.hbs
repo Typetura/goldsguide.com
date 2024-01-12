@@ -6,59 +6,40 @@
         {{#has visibility="paid"}}
            
 <div class="shoutout" style="margin-left:auto; margin-right:auto;">
-<h2 class="primary-headline"><strong>Subscribe to unlock</strong></h2>
+    <h2 class="primary-headline"><strong>Subscribe to unlock</strong></h2>
+        
         {{/has}}
 
         {{#has visibility="members"}}
 
             <h2 class="primary-headline">Sign up for free to keep reading.</h2>
             <p class="get-ahead">Just enter your email below.</p>
+        
         {{/has}}
 
         {{#has visibility="tiers"}}
 
             <h2 class="primary-headline">Subscribe to {{tiers}} for access.</h2>
+        
         {{/has}}
 
         {{#if @member}}
 
             <a class="bullion-button" data-portal="account/plans" style="color:{{accentColor}}">Upgrade</a>
+        
         {{else}}
 
         <a class="bullion-button" data-portal="signup/monthly">$10 per month</a>
         <a class="bullion-button" data-portal="signup/yearly">$100 per year</a>
-
-
-        {{/if}}
-    </div>
-
-<div class="get-ahead">
 
     <p class="primary-subheadline">
       Get ahead of the curve
     </p>
 
 <br>
-        <p><a data-portal="signup/">Subscribe</a> to receive one new edition of <u>Gold’s Guide Advance</u> per month, featuring:</p>
-        <ul style="text-align: left;">r
-            <li style="font-style: normal;">Extensive research analyzing how to derive and develop new innovations</li>
-            <li style="font-style: normal;">Original data & visualizations contextualizing how innovations are diffused and sustained</li>
-            <li style="font-style: normal;">Proven tactics that you can leverage to drive innovation in your business</li>
-            <li style="font-style: normal;">Informed by over a decade of experience working with innovative companies including The Verge, VICE, and Barstool Sports</li>
-            
-        </ul>
-
-<br>
+        <p><a data-portal="signup/">Subscribe</a> to receive one new edition of <u>Gold’s Guide Advance</u> per month.</p> 
+        <p class="get-ahead"><a href="/advance">Learn more about membership benefits</a></p>
 
 
-            <a class="bullion-button" data-portal="signup/monthly">$10 per month</a>
-            <a class="bullion-button" data-portal="signup/yearly">$100 per year</a>
-
-            <br>
-
-        <p>Check out a free sample: <u>Gold’s Guide to <a href="/daring-fireball-2023">Daring Fireball</a></u>
-        </p>
-
-
-
+        {{/if}}
 </div>
