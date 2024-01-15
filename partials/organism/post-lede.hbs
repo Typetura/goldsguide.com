@@ -8,16 +8,15 @@
   <div class="post-lede-content">
     <div class="flex-spacer"></div>
       <div class="meta entry-meta">
-        
+        <div class='meta entry-post-visibility entry-post-visibility--{{ visibility }}'>
+          <span class="entry-private-library post-visibility members"><a href="/advance">Advance</a></span> <span class="entry-private-library-mark">✦</span>
+        </div>
         {{#if primary_tag}}
           <a
             class="meta post-lede-tag"
             href="{{primary_tag.url}}"
           >{{primary_tag.name}}</a>
         {{/if}}
-        <div class='meta entry-post-visibility entry-post-visibility--{{ visibility }}'>
-          <span class="entry-private-library-mark">✦</span> <span class="entry-private-library post-visibility members"><a href="/advance">Advance</a></span> 
-        </div>
       </div>
 
     <h1 class="primary-headline post-title">{{title}}</h1>
@@ -29,7 +28,7 @@
     <div class="flex-spacer post-lead-spacer-2"></div>
 
     <div class="meta post-byline">
-      <span class="author-name">presented by <a href="/overview/">Tyler Gold</a></span>
+      <span class="author-name">by <a href="/about">Tyler Gold</a></span>
       —
       <time
         class="byline-meta-date"
