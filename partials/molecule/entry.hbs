@@ -1,29 +1,29 @@
 <article class="entry {{post_class}} {{class}}" {{#if primary_tag}}{{#primary_tag}}{{#if accent_color}}style="--tag_color:{{accent_color}}"{{/if}}{{/primary_tag}}{{/if}}>
 
   {{#if feature_image}}
-		{{> "atom/image"}}
+    {{> "atom/image"}}
   {{/if}}
 
   <div class="entry-content">
 
     <header class="entry-header">
       <div class="meta entry-meta">
+        <div class='meta entry-post-visibility entry-post-visibility--{{ visibility }}'>
+          <span class="entry-private-library post-visibility members"><a href="/advance">Advance</a></span> <span class="entry-private-library-mark">✦</span>
+        </div>
         {{#if primary_tag}}
         {{#primary_tag}}
         <div class="entry-tag">
-    			<a href="{{url}}">
-    				{{name}}
-    			</a>
+          <a href="{{url}}">
+            {{name}}
+          </a>
         </div>
         {{/primary_tag}}
         {{/if}}
-         <div class='meta entry-post-visibility entry-post-visibility--{{ visibility }}'>
-          <span class="entry-private-library-mark"> ✦ </span><span class="entry-private-library post-visibility members"><a href="/advance">Advance</a></span>
-        </div>
       </div>
-	    <a class="entry-link" href="{{url}}">
+      <a class="entry-link" href="{{url}}">
         <h1 class="entry-title primary-headline">{{title}}</h1>
-	    </a>
+      </a>
     </header>
 
     <section class="entry-excerpt">
