@@ -8,9 +8,6 @@
 
     <header class="entry-header">
       <div class="meta entry-meta">
-        <div class='meta entry-post-visibility entry-post-visibility--{{ visibility }}'>
-          <span class="entry-private-library post-visibility members"><a href="/advance">Advance</a></span> <span class="entry-private-library-mark">✦</span>
-        </div>
         {{#if primary_tag}}
         {{#primary_tag}}
         <div class="entry-tag">
@@ -20,6 +17,9 @@
         </div>
         {{/primary_tag}}
         {{/if}}
+         <div class='meta entry-post-visibility entry-post-visibility--{{ visibility }}'>
+          <span class="entry-private-library-mark">✦</span> <span class="entry-private-library post-visibility members"><a href="/advance">Advance</a></span>
+        </div>
       </div>
 	    <a class="entry-link" href="{{url}}">
         <h1 class="entry-title primary-headline">{{title}}</h1>
