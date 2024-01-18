@@ -21,11 +21,7 @@
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
     "postship": "git fetch && gulp release"
   },
-  "author": {
-    "name": "Typetura",
-    "email": "info@typetura.com",
-    "url": "https://typetura.com/"
-  },
+  "author": "Typetura <info@typetura.com> (https://typetura.com/)",
   "gpm": {
     "type": "theme",
     "categories": [
@@ -40,9 +36,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Typetura/GoldsGuide.git"
+    "url": "git+https://github.com/Typetura/GoldsGuide.git"
   },
-  "bugs": "https://github.com/Typetura/GoldsGuide/issues",
+  "bugs": {
+    "url": "https://github.com/Typetura/GoldsGuide/issues"
+  },
   "contributors": "https://github.com/Typetura/GoldsGuide/graphs/contributors",
   "devDependencies": {
     "@tryghost/release-utils": "0.6.12",
@@ -95,5 +93,8 @@
   },
   "dependencies": {
     "18": "^0.0.0"
-  }
+  },
+  "homepage": "https://github.com/Typetura/GoldsGuide#readme",
+  "main": "gulpfile.js",
+  "license": "ISC"
 }
