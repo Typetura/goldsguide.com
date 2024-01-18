@@ -1,0 +1,23 @@
+<aside class="read-more">
+
+        {{!-- The {#get} helper below fetches some of the latest posts here
+        so that people have something else to read when they finish this one.
+
+        This query gets the latest 3 posts on the site, but adds a filter to
+        exclude the post we're currently on from being included. --}}
+        
+        <h1 class="primary-headline">Read More</h1>
+        
+        <div class="read-more-container">
+
+        {{#get "posts" filter="id:-{{id}}" include="authors" limit="2" as |more_posts|}}
+            {{#if more_posts}}
+                {{#foreach more_posts}}
+                    {{> "molecule/entry" class="is-vertical"}}
+                {{/foreach}}
+            {{/if}}
+        {{/get}}
+        
+        </div>
+
+</aside>

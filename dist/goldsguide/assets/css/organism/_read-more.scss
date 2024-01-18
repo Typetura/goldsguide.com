@@ -1,0 +1,20 @@
+.read-more {
+  max-width: var(--max-width);
+  padding: var(--gutter);
+  margin: 6rem auto 3rem;
+  outline: 1px solid var(--text);
+  box-shadow: var(--shadow);
+  background: var(--background-alt);
+  color: var(--text-alt);
+}
+.read-more-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  @media (min-width: 50em) {
+    flex-direction: row;
+  }
+  > * {
+    flex: 1;
+  }
+}

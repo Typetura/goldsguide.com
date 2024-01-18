@@ -1,0 +1,33 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- {{> molecule/nav}} --}}
+
+{{#author}}
+<header class="page-header">
+  <a href="/" class="page-lede-logo">
+    {{> icons/logo}}
+  </a>
+    <h1 class="primary-headline page-header-headline">{{name}}</h1>
+    {{#if bio}}
+        <p class="primary-subheadline page-description">
+            {{bio}}
+        </p>
+    {{/if}}
+
+</header>
+{{/author}}
+
+<main id="site-main" class="site-main outer">
+	<section class="tag-posts">
+        {{#foreach posts}}
+        {{> "molecule/entry" class="is-vertical"}}
+        {{/foreach}}
+    </section>
+
+	{{> "organism/newsletter"}}
+</main>
+
+
+
+{{> "organism/foot"}}

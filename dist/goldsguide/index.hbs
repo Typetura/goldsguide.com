@@ -1,0 +1,26 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- {{> molecule/nav}} --}}
+
+{{> "molecule/home-masthead"}}
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+
+	{{> "organism/home-cover"}}
+
+	{{> "organism/newsletter"}}
+
+	<section class="category">
+
+	{{#get "tags" filter="slug:[products, methods, ideas]" as |tags|}}
+		{{#foreach tags}}
+		{{> "organism/category"}}
+		{{/foreach}}
+	{{/get}}
+	</section>
+</main>
+
+{{> "organism/foot"}}

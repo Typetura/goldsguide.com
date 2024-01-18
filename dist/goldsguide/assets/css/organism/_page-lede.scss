@@ -1,0 +1,19 @@
+.page-lede-logo {
+  grid-column-start: 2;
+  grid-column-end: 25;
+  display: block;
+  margin: 0 auto 2rem;
+  svg {
+    width: 54vw;
+    height: auto;
+    max-width: 18rem;
+    margin: auto;
+  }
+}
+
+.page-lede {
+  text-align: center;
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 var(--gutter);
+}

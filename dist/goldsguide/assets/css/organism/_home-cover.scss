@@ -1,0 +1,107 @@
+.home-cover {
+  position: relative;
+  color: var(--text-alt);
+  background: var(--background-alt);
+  padding: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  outline: 1px solid var(--text);
+  box-shadow: var(--shadow);
+  margin: 3rem auto 6rem;
+  .gold-bars {
+    position: absolute;
+    width: 100vw;
+    height: 120vw;
+    max-width: 42rem;
+    max-height: 50rem;
+    right: 0;
+    top: -14rem;
+    color: var(--primary);
+    mix-blend-mode: multiply;
+    z-index: -2;
+    @media (prefers-color-scheme: dark) {
+      mix-blend-mode: normal;
+      opacity: 50%;
+    }
+  }
+  .entry {
+    --tt-scale: 0.6;
+  }
+  .tag-feature .entry-content {
+    min-height: 22rem;
+    @media (min-width: 50em) {
+      min-height: auto;
+    }
+  }
+  .entry:first-of-type {
+    --tt-scale: 1;
+    .entry-image {
+      flex: 0;
+    }
+    @media (min-width: 50em) {
+      &.tag-feature {
+        margin-bottom: calc(var(--gutter) * -1 + 1px);
+        .entry-content {
+          margin: 0 0 0 calc(var(--gutter) * -1);
+        }
+      }
+    }
+  }
+
+
+  /* @media (max-width: 30em) {
+    .entry:not(:first-of-type) .entry-image {
+      display: none;
+    }
+  } */
+
+
+  @media (min-width: 50em) {
+    display: grid;
+    grid-template-columns: var(--grid);
+    margin: var(--gutter) 0;
+    background: none;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+    &::before {
+      content: "";
+      z-index: -1;
+      background: var(--background-alt);
+      border: 1px solid var(--text);
+      box-shadow: var(--shadow);
+      grid-column: 2 / 26;
+      grid-row: 1 / 4;
+      margin: -1px calc(var(--gutter) * -1) calc(var(--gutter) * -1);
+    }
+    .entry {
+      grid-column-start: 14;
+      grid-column-end: span 12;
+    }
+    .entry:first-of-type {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      grid-row-end: span 4;
+      border-right: 1px solid var(--text);
+      .entry-image {
+        width: calc(100% + var(--gutter) - 1px);
+        margin-left: calc(var(--gutter) * -1 + 1px);
+      }
+      .entry-content {
+        margin-right: var(--gutter);
+      }
+    }
+    .entry:nth-of-type(2) {
+      grid-row-start: 1;
+      margin-top: var(--gutter);
+      
+    }
+    .entry:nth-of-type(3) {
+      grid-row-start: 2;
+    }
+    .entry:nth-of-type(4) {
+      grid-row-start: 3;
+    }
+  }
+}

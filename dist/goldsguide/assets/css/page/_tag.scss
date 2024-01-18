@@ -1,0 +1,34 @@
+.page-accent-color {
+  background: var(--primary);
+  --shadow: 0 0.5rem 1.7rem hsla(0, 0%, 0%, 0.16);
+  .main-nav-overflow {
+    display: none;
+  }
+}
+
+.tag-posts {
+  max-width: var(--max-width);
+  padding: var(--gutter);
+  outline: 1px solid var(--text);
+  margin: 2rem auto;
+  background: var(--background-alt);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: var(--gutter);
+  grid-auto-flow: dense;
+  .tag-feature .entry-excerpt {
+    display: block;
+  }
+  @media (min-width: 40em) {
+    grid-template-columns: repeat(2, 1fr);
+    .tag-feature {
+      grid-column-end: span 2;
+      .entry-excerpt {
+        display: block;
+      }
+    }
+  }
+  @media (min-width: 60em) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

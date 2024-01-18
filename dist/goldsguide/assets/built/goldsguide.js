@@ -1,0 +1,1 @@
+//# sourceMappingURL=goldsguide.js.map

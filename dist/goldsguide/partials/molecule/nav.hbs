@@ -1,0 +1,11 @@
+<nav class="main-nav small">
+  {{navigation}}
+  <div class="main-nav-overflow"></div>
+  <div class="flex-spacer"></div>
+
+  {{#unless @member}}
+    <a class="gh-head-button" href="#/portal/signin">Sign in</a>
+  {{else}}
+    <a class="gh-head-button" href="#/portal/account">Account</a>
+  {{/unless}}
+</nav>

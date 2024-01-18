@@ -1,0 +1,80 @@
+html {
+  background: var(--background);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  scroll-snap-type: y mandatory;
+}
+
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+a,
+button {
+  touch-action: manipulation;
+}
+
+button,
+input[type="button"] {
+  cursor: pointer;
+}
+
+a {
+  mix-blend-mode: multiply;
+  color: inherit;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.1em;
+  transition: text-decoration-color var(--transition);
+  @media (prefers-color-scheme: dark) {
+    mix-blend-mode: normal;
+  }
+}
+a:hover {
+  text-decoration-color: var(--text);
+}
+
+::placeholder {
+  color: #aaa;
+}
+
+svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+img,
+iframe[src*="youtube"],
+iframe[src*="vimeo"],
+iframe[src*="twitch"],
+.fluid-width-video-wrapper > * {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+iframe[src*="youtube"],
+iframe[src*="vimeo"],
+iframe[src*="twitch"],
+.fluid-width-video-wrapper > * {
+  aspect-ratio: 16 / 9;
+}
+
+.gh-portal-triggerbtn-iframe {
+  display: none;
+}
+
+.flex-spacer {
+  flex: 1;
+}
+.error-content {
+  margin-top: 4rem;
+}
+.error-message {
+  --tt-scale: 1.6;
+  text-align: center;
+}

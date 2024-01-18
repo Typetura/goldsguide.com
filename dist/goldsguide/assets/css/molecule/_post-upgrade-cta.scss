@@ -1,0 +1,38 @@
+.gh-post-upgrade-cta-content {
+  width: 90%;
+  
+  border-radius: 10px !important;
+  border: 5px solid var(--primary) !important;
+  margin-top: 3rem !important;
+  padding: 54px !important;
+  margin-left: auto;
+  margin-right: auto;
+  * {
+    color: var(--text) !important;
+  }
+}
+.gh-btn {
+    border-radius: .36rem !important;
+    background: #f6c365 !important;
+    width: 36% !important;
+    margin-left: auto;
+    margin-right: auto;
+    color: #353d48 !important;
+  }
+  .gh-btn:hover {
+    background: var(--primary) !important;
+    box-shadow: inset var(--shadow) !important;
+  }
+.bullion-button {
+  background-color: #f1b762;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  width: 36%;
+}

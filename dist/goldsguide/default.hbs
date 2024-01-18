@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+  <head>
+
+    {{! Basic meta - advanced meta is output with {ghost_head} below }}
+    <title>{{meta_title}}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="disable-adaptations" content="watch" />
+    <meta
+      name="theme-color"
+      content="{{@site.accent_color}}"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#353d48"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="stylesheet" type="text/css" href="{{asset "built/style.css"}}" />
+    <script src="{{asset "js/typetura.js"}}"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+				
+		<link rel="apple-touch-icon" href="{{asset "images/icon.png"}}" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	
+    {{! This tag outputs all your advanced SEO meta, structured data, and other important settings,
+    it should always be the last tag before the closing head tag }}
+    {{ghost_head}}
+
+  </head>
+  <body class="{{body_class}}">
+
+    {{{body}}}
+
+    {{! Trigger events with JavaScript }}
+    <script defer data-domain="goldsguide.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+  
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    {{! Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries }}
+    <script src="{{asset "js/goldsguide.js"}}"></script>
+
+    {{! Scripts - Service workers handle web app capable logic }}
+
+    {{! Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag }}
+    {{ghost_foot}}
+
+  </body>
+</html>

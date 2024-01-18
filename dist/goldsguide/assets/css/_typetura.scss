@@ -1,0 +1,334 @@
+/*!
+ * Copyright 2018-2021 Typetura LLC
+ * typetura.com
+ *
+ * US Patent US10769348B1
+ */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,100..900,0..100,0..1&display=swap");
+
+html {
+  --tt-ease: linear;
+  --tt-max: 1600;
+}
+*,
+:before,
+:after,
+html {
+  --tt-key: none;
+  animation: var(--tt-key) 1s var(--tt-ease) 1
+    calc(-1s * var(--tt-bind) / var(--tt-max)) both paused;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+  --tt-key: line-height;
+  --tt-max: 1200;
+  --tt-ease: linear;
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.fraunces {
+  font-family: "Fraunces", serif;
+}
+
+html {
+  --font-headline: "Fraunces", serif;
+  --font-text: "Fraunces", serif;
+  font-family: var(--font-text);
+  font-size: calc(100% * var(--tt-base) / 16);
+  line-height: 1.5;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  --tt-ease: cubic-bezier(0, 0.75, 0.1, 0.9);
+  --ease-headline: cubic-bezier(0.5, 0.25, 0.8, 1);
+  --tt-key: uxddu9r;
+  --tt-max: 1000;
+}
+@keyframes uxddu9r {
+  0% {
+    font-size: 0%;
+    line-height: 1.35;
+  }
+  100% {
+    font-size: calc(100% * var(--tt-base) / 16);
+    line-height: 1.6;
+  }
+}
+
+@keyframes line-height {
+  0% {
+    line-height: 1.35;
+  }
+  100% {
+    line-height: 1.6;
+  }
+}
+ol,
+ul {
+  font-size: 0.95rem;
+}
+
+hr {
+  border: 0.5px solid;
+  opacity: 0.2;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+blockquote {
+  padding-left: 1em;
+  font-size: 0.95em;
+  position: relative;
+  font-weight: 340;
+}
+
+blockquote:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  left: 0;
+  height: 100%;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.caps {
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+table,
+.tabular {
+  font-variant-numeric: tabular-nums;
+  text-align: left;
+  border-collapse: collapse;
+  line-height: 1.3;
+  font-size: 1em;
+}
+
+th {
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  padding: 0 0.75em 0.5em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+}
+
+td {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.75em;
+}
+
+.numeric {
+  text-align: right;
+  font-size: 0.86em;
+}
+
+code {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.85em;
+}
+
+.caption,
+figcaption {
+  margin-top: 0.75em;
+  margin-bottom: 2em;
+  padding: 0 0 0.75em;
+  font-size: 0.7em;
+  line-height: 1.4;
+  position: relative;
+  text-align: left;
+  font-style: italic;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+small,
+.small {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+big,
+.big {
+  font-size: 1.1rem;
+  --tt-key: uxdduap;
+  --tt-max: 1000;
+}
+@keyframes uxdduap {
+  0% {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  100% {
+    font-size: calc(1rem + (0.3rem * var(--tt-scale)));
+    line-height: 1.35;
+  }
+}
+
+.primary-headline,
+.typetura-prose h1 {
+  --tt-ease: var(--ease-headline);
+  --tt-max: 2000;
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  --tt-key: uxdduaq;
+  --tt-max: 2000;
+}
+@keyframes uxdduaq {
+  0% {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+    letter-spacing: 0;
+  }
+  100% {
+    font-size: calc(1rem + (7rem * var(--tt-scale)));
+    margin-bottom: calc(1rem + (0.6rem * var(--tt-scale)));
+    font-weight: 300;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+    letter-spacing: -0.01em;
+  }
+}
+
+.primary-subheadline {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin-top: -0.2rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  --tt-ease: var(--ease-headline);
+  --tt-key: uxddub1;
+  --tt-max: 2000;
+}
+@keyframes uxddub1 {
+  0% {
+    font-size: 1rem;
+    line-height: 1.15;
+    margin-top: -0.25rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+  }
+  100% {
+    font-size: calc(1rem + (1.8rem * var(--tt-scale)));
+    line-height: 1.25;
+    margin-top: -1.5rem;
+    margin-bottom: calc(1rem + (2rem * var(--tt-scale)));
+    font-weight: 300;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+  }
+}
+
+.meta {
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  font-size: 0.6rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.section-headline,
+.typetura-prose h2 {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.2rem;
+  padding-top: 2rem;
+  line-height: 1;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  --tt-ease: var(--ease-headline);
+  --tt-key: uxddubi;
+  --tt-max: 2000;
+}
+@keyframes uxddubi {
+  0% {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  100% {
+    font-size: calc(1rem + (2rem * var(--tt-scale)));
+    line-height: 1;
+    margin-top: calc(1rem + (2rem * var(--tt-scale)));
+    margin-bottom: calc(0.2rem + (0.2rem * var(--tt-scale)));
+  }
+}
+
+.section-subheadline,
+.typetura-prose h3 {
+  font-family: var(--font-text);
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  --tt-ease: var(--ease-headline);
+  --tt-key: uxddubr;
+  --tt-max: 1000;
+}
+@keyframes uxddubr {
+  0% {
+    font-size: 1rem;
+  }
+  100% {
+    font-size: 1.2rem;
+  }
+}
+
+.section-label,
+.typetura-prose h4,
+.typetura-prose h5,
+.typetura-prose h6 {
+  font-family: var(--font-text);
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: 350;
+  font-style: italic;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+.pullquote {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  line-height: 1.2;
+  position: relative;
+  font-weight: 250;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  --tt-ease: var(--ease-headline);
+  --tt-key: uxdduc6;
+  --tt-max: 800;
+}
+@keyframes uxdduc6 {
+  0% {
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 320;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+  }
+  100% {
+    font-size: calc(1rem + (1.2rem * var(--tt-scale)));
+    line-height: 1;
+    font-weight: 250;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+  }
+}
+
+/*# sourceMappingURL=typetura.css.map */

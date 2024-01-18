@@ -1,0 +1,28 @@
+.home-masthead {
+  max-width: var(--max-width);
+  margin: min(6vw, 4rem) auto min(1vw, 1rem);
+  padding: 1rem var(--gutter);
+}
+
+.home-masthead-logo a {
+  display: table;
+  mix-blend-mode: normal;
+  filter: drop-shadow(1.5px 3px 2px #d38d0a)
+    drop-shadow(-0.5px -1.5px 0 #ffe3af);
+  @media (prefers-color-scheme: dark) {
+    filter: drop-shadow(1.5px 3px 2px #000);
+  }
+}
+
+.home-masthead-logo svg {
+  width: 81vw;
+  max-width: calc(var(--max-width) * 0.72);
+  min-width: 11rem;
+  height: auto;
+  margin-bottom: 1.4rem;
+}
+
+.home-masthead-description {
+  max-width: calc(var(--max-width) * 0.5);
+  --tt-scale: 1.8;
+}
