@@ -1,6 +1,6 @@
 {
   "name": "goldsguide",
-  "description": "for innovators.",
+  "description": "celebrating innovators.",
   "demo": "https://goldsguide.com",
   "version": "3.0.0",
   "engines": {
@@ -22,9 +22,9 @@
     "postship": "git fetch && gulp release"
   },
   "author": {
-    "name": "Typetura",
-    "email": "info@typetura.com",
-    "url": "https://typetura.com/"
+    "name": "Tyler Gold",
+    "email": "tyler@goldsguide.com",
+    "url": "https://goldsguide.com/overview"
   },
   "gpm": {
     "type": "theme",
