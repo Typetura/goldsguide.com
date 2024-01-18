@@ -74,8 +74,8 @@ form[data-members-form].error .message-error {
   bottom: calc(1rem + env(safe-area-inset-bottom));
   top: 1rem;
   background: var(--text);
-  border-radius: 1.7rem;
-  padding: 0.25rem;
+  border-radius: .9rem;
+  padding: 0.36rem;
   width: calc(100% - (var(--gutter) * 2));
   max-width: 30rem;
   box-shadow: var(--shadow);
@@ -85,12 +85,12 @@ form[data-members-form].error .message-error {
 .newsletter-form-group {
   width: 100%;
   display: flex;
-  gap: 0.25rem;
+  gap: 0.42rem;
 }
 .newsletter-input {
   border: none;
   background: #ffffff;
-  border-radius: 1.65rem;
+  border-radius: .54rem;
   flex: 1;
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
@@ -103,7 +103,9 @@ form[data-members-form].error .message-error {
 .newsletter-join {
   border: none;
   background: var(--primary);
-  border-radius: 20rem;
+  border: 1px solid #090f16;
+  color: #090f16;
+  border-radius: .54rem;
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
   font-family: inherit;
@@ -114,6 +116,7 @@ form[data-members-form].error .message-error {
 }
 
 .newsletter-kicker {
+  font-style: italic;
   max-width: 50rem;
   margin: 1rem auto 6rem;
   text-align: center;

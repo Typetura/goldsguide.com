@@ -48,11 +48,15 @@
       }
     }
   }
-  @media (max-width: 30em) {
+
+
+  /* @media (max-width: 30em) {
     .entry:not(:first-of-type) .entry-image {
       display: none;
     }
-  }
+  } */
+
+
   @media (min-width: 50em) {
     display: grid;
     grid-template-columns: var(--grid);
@@ -78,7 +82,7 @@
     .entry:first-of-type {
       grid-column-start: 2;
       grid-row-start: 1;
-      grid-row-end: span 3;
+      grid-row-end: span 4;
       border-right: 1px solid var(--text);
       .entry-image {
         width: calc(100% + var(--gutter) - 1px);
@@ -91,6 +95,7 @@
     .entry:nth-of-type(2) {
       grid-row-start: 1;
       margin-top: var(--gutter);
+      
     }
     .entry:nth-of-type(3) {
       grid-row-start: 2;

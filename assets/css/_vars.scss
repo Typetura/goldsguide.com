@@ -6,9 +6,9 @@ html {
   // COLOR
   --primary: var(--ghost-accent-color);
   --background: var(--ghost-accent-color);
-  --background-alt: #ffffff;
-  --text: #353d48;
-  --text-alt: #353d48;
+  --background-alt: #f6c365;
+  --text: #090f16;
+  --text-alt: #090f16;
 
   --shadow: 0 0.5rem 1.7rem hsla(28, 83%, 44%, 0.3);
 
@@ -35,10 +35,10 @@ html {
 @media (prefers-color-scheme: dark) {
   html {
     --primary: var(--ghost-accent-color);
-    --background: #353d48;
-    --background-alt: #000000;
-    --text: #f7e6c7;
-    --text-alt: #ffffff;
+    --background: #090f16;
+    --background-alt: #090f16;
+    --text: #f6c365;
+    --text-alt: #f6c365;
 
     --shadow: 0 0.5rem 1.7rem rgba(0, 0, 0, 0.3);
   }
