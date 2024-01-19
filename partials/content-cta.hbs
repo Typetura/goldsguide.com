@@ -1,35 +1,36 @@
 {{{html}}}
 
-    <div class="gh-post-upgrade-cta-content"></div>
+<div class="class="shoutout">
     <div class="sign-in"><small>Already have an account? <a data-portal="signin">Sign in</a></small></div>
 
         {{#has visibility="paid"}}
-           
-    <div class="shoutout" style="margin-left:auto; margin-right:auto;">
-        <h2 class="primary-headline"><strong>Subscribe to unlock</strong> <u>Gold’s Guide</u> <u>Advance</u></h2>
-        <br>
-            
+           <div class="center-container">
+        <h2 class="cta-headline"><strong>Subscribe to unlock</strong> <u>Gold’s Guide Advance</u></h2>
+        </div>
         <div class="center-container">
             <a class="bullion-button" data-portal="signup/monthly">$10 per month</a>
             <a class="bullion-button" data-portal="signup/yearly">$100 per year</a>
         </div>
 
-        
+     
         {{/has}}
 
         {{#has visibility="members"}}
 
-            <h2 class="primary-headline">Sign up for free to keep reading.</h2>
-        <br>
+<div class="center-container">
+    <h2 class="cta-headline">Sign up for free to keep reading.</h2>
+<div>
+        
             <div class="center-container">
                 <a class="bullion-button" data-portal="signup/">Sign up</a>
             </div>
+
         {{/has}}
 
         {{#has visibility="tiers"}}
-
-            <h2 class="primary-headline">Subscribe to {{tiers}} for access.</h2>
-        
+ <div class="center-container">
+            <h2 class="cta-headline">Subscribe to {{tiers}} for access.</h2>
+ </div>
         {{/has}}
 
         {{#if @member}}

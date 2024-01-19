@@ -68,7 +68,7 @@
       grid-column-end: 14;
       grid-row-start: 2;
       grid-row-end: 3;
-      margin: var(--gutter) var(--gutter) -3rem 0;
+      margin: /* var(--gutter) var(--gutter) */ -3rem 0;
       z-index: 2;
       justify-self: end;
     }

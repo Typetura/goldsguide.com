@@ -48,7 +48,7 @@
     background: linear-gradient(90deg, var(--gradient-stop), var(--background));
     align-self: stretch;
     @media (prefers-color-scheme: dark) {
-      --gradient-stop: #{rgba(#353d48, 0)};
+      --gradient-stop: #{rgba(#090f16, 0)};
     }
   }
 }
