@@ -82,7 +82,7 @@
     .entry:first-of-type {
       grid-column-start: 2;
       grid-row-start: 1;
-      grid-row-end: span 4;
+      grid-row-end: span 3;
       border-right: 1px solid var(--text);
       .entry-image {
         width: calc(100% + var(--gutter) - 1px);

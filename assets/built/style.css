@@ -666,7 +666,7 @@ a.entry-link {
 }
 @media (prefers-color-scheme: dark) {
   .main-nav .main-nav-overflow {
-    --gradient-stop: rgba(53, 61, 72, 0);
+    --gradient-stop: rgba(9, 15, 22, 0);
   }
 }
 
@@ -690,20 +690,6 @@ a.entry-link {
 .gh-btn:hover {
   background: var(--primary) !important;
   box-shadow: inset var(--shadow) !important;
-}
-
-.bullion-button {
-  background-color: #f1b762;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  padding: 15px 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 700;
-  width: 36%;
 }
 
 .category {
@@ -979,7 +965,7 @@ a.entry-link {
   .home-cover .entry:first-of-type {
     grid-column-start: 2;
     grid-row-start: 1;
-    grid-row-end: span 4;
+    grid-row-end: span 3;
     border-right: 1px solid var(--text);
   }
   .home-cover .entry:first-of-type .entry-image {
